@@ -1,0 +1,11 @@
+{
+  "name": "clanker-pack",
+  "owner": { "name": "Iah-Uch" },
+  "plugins": [
+    { "name": "senior-pack",  "source": "./plugins/senior-pack",  "version": "1.0.0", "description": "Senior role skills" },
+    { "name": "ui-pack",      "source": "./plugins/ui-pack",      "version": "1.0.0", "description": "UI/UX skills" },
+    { "name": "quality-pack", "source": "./plugins/quality-pack", "version": "1.0.0", "description": "Code quality skills" },
+    { "name": "tools-pack",   "source": "./plugins/tools-pack",   "version": "1.0.0", "description": "Utility skills" },
+    { "name": "stack-pack",   "source": "./plugins/stack-pack",   "version": "1.0.0", "description": "Stack-specific skills" }
+  ]
+}

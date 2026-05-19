@@ -1,0 +1,15 @@
+{
+  "name": "senior-pack",
+  "description": "Senior role skills",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/senior-backend",
+    "./skills/senior-frontend",
+    "./skills/senior-fullstack",
+    "./skills/senior-architect",
+    "./skills/senior-security",
+    "./skills/senior-qa"
+  ],
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}

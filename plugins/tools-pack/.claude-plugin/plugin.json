@@ -1,0 +1,13 @@
+{
+  "name": "tools-pack",
+  "description": "Utility skills",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/file-organizer",
+    "./skills/pdf-processing-pro",
+    "./skills/mermaid-diagrams",
+    "./skills/webapp-testing"
+  ],
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}

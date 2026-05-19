@@ -1,0 +1,13 @@
+{
+  "name": "quality-pack",
+  "description": "Code quality skills",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/coding-guidelines",
+    "./skills/code-reviewer",
+    "./skills/systematic-debugging",
+    "./skills/content-research-writer"
+  ],
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}
