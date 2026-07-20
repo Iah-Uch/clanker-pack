@@ -5,6 +5,7 @@
   "skills": [
     "./skills/coding-guidelines",
     "./skills/code-reviewer",
+    "./skills/git-workflow",
     "./skills/systematic-debugging",
     "./skills/content-research-writer"
   ],
