@@ -78,6 +78,10 @@ The packs share a point of view:
 - **The human owns and approves the work.** Nothing commits without explicit approval, and work is never attributed to the AI.
 - **One capability per skill.** Small, composable, independently installable — pick the packs you want.
 
+## Attribution
+
+Not everything here is mine. This repo is a mix of skills I built and ones I found useful around the web and collected into one place. Credit for the latter belongs to their original authors.
+
 ## License
 
 MIT
