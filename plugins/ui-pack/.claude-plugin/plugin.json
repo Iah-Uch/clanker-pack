@@ -1,13 +1,16 @@
 {
   "name": "ui-pack",
   "description": "UI/UX skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/theme-factory",
     "./skills/ui-design-system",
     "./skills/tailwind-patterns",
-    "./skills/web-performance-optimization"
+    "./skills/web-performance-optimization",
+    "./skills/design-asset-sourcing"
   ],
-  "author": { "name": "Iah-Uch" },
+  "author": {
+    "name": "Iah-Uch"
+  },
   "license": "MIT"
 }
