@@ -1,6 +1,6 @@
 # clanker-pack
 
-A personal Claude Code plugin marketplace — 33 skills across 6 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
+A personal Claude Code plugin marketplace — 34 skills across 6 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
 
 ## Install
 
@@ -27,7 +27,7 @@ Update after new skills land:
 |------|:------:|-------|
 | **senior-pack** | 6 | Senior-role engineering: architecture, backend, frontend, fullstack, QA, security |
 | **quality-pack** | 5 | How the work gets done well: code review, debugging, git discipline, guidelines, writing |
-| **ui-pack** | 4 | Design systems, Tailwind v4, theming, web performance |
+| **ui-pack** | 5 | Design systems, Tailwind v4, theming, asset sourcing, web performance |
 | **tools-pack** | 4 | Diagrams, PDF processing, web-app testing, file organization |
 | **stack-pack** | 3 | Stack-specific depth: Docker, Python, security & compliance |
 | **generative-pack** | 11 | Generative and creative-coding techniques by field (motion, geometry, rules and generation, physics, creative tooling, learning and inference, data and spatial, audio, shaders, image and color) |
@@ -57,6 +57,7 @@ The discipline layer: process skills that keep output correct, reviewable, and h
 - **ui-design-system** — design tokens, component docs, responsive calculations, design→dev handoff.
 - **tailwind-patterns** — Tailwind v4 CSS-first config, container queries, design-token architecture.
 - **theme-factory** — apply one of 10 preset themes (or generate one) to slides, docs, reports, landing pages.
+- **design-asset-sourcing** — vetted library of free illustrations, icons, SVG logos, stock photos, placeholders, patterns, fonts, palettes, UI blocks and mockup tools, with verified fetch endpoints, license rules, and a gate on whether the task needs an asset at all.
 - **web-performance-optimization** — Core Web Vitals, loading speed, bundle size, caching, runtime performance.
 
 ### tools-pack — utilities
