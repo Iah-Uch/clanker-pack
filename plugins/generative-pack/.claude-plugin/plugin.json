@@ -1,0 +1,20 @@
+{
+  "name": "generative-pack",
+  "description": "Technique references for generative and creative coding, sorted by field, with a finder skill that routes a goal to the right catalog",
+  "version": "0.8.0",
+  "skills": [
+    "./skills/motion-time",
+    "./skills/geometry-structure",
+    "./skills/rules-generation",
+    "./skills/physics-simulation",
+    "./skills/creative-tooling",
+    "./skills/learning-inference",
+    "./skills/data-spatial",
+    "./skills/audio-signal",
+    "./skills/shader-effects",
+    "./skills/image-color-vector",
+    "./skills/technique-finder"
+  ],
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}
