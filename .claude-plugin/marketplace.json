@@ -1,6 +1,7 @@
 {
   "name": "clanker-pack",
   "owner": { "name": "Iah-Uch" },
+  "metadata": { "description": "Personal marketplace of skills for UI, containers, diagrams, and generative and creative coding." },
   "plugins": [
     { "name": "ui-pack",      "source": "./plugins/ui-pack",      "version": "1.2.0", "description": "UI/UX skills" },
     { "name": "tools-pack",   "source": "./plugins/tools-pack",   "version": "1.1.0", "description": "Utility skills" },
