@@ -1,6 +1,6 @@
 ---
 name: image-color-vector
-description: Use when processing or stylizing images, color and vectors: color spaces and gradients (OKLab, LCH, HSLuv), palettes and color scales, quantization and dithering, raster-to-vector tracing, skeletons and centerlines, differentiable vector graphics, seam carving, geometric-primitive and triangulated art, stippling, brush engines, optical flow, image and video tools (ImageMagick, libvips, FFmpeg, OpenCV, scikit-image), RAW and JPEG decoding, font rasterization, signed distance field text, perceptual image diff. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries.
+description: "Use when processing or stylizing images, color and vectors: color spaces and gradients (OKLab, LCH, HSLuv), palettes and color scales, quantization and dithering, raster-to-vector tracing, skeletons and centerlines, differentiable vector graphics, seam carving, geometric-primitive and triangulated art, stippling, brush engines, optical flow, image and video tools (ImageMagick, libvips, FFmpeg, OpenCV, scikit-image), RAW and JPEG decoding, font rasterization, signed distance field text, perceptual image diff. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries."
 ---
 
 # Image, color and vector techniques
