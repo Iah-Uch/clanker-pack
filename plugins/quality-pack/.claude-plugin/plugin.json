@@ -1,12 +1,8 @@
 {
   "name": "quality-pack",
-  "description": "Code quality skills",
-  "version": "1.0.0",
+  "description": "Research-backed writing skills",
+  "version": "1.1.0",
   "skills": [
-    "./skills/coding-guidelines",
-    "./skills/code-reviewer",
-    "./skills/git-workflow",
-    "./skills/systematic-debugging",
     "./skills/content-research-writer"
   ],
   "author": { "name": "Iah-Uch" },
