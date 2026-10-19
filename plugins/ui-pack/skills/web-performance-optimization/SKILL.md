@@ -629,8 +629,6 @@ export async function getStaticProps() {
 
 - `@react-best-practices` - React performance patterns
 - `@frontend-dev-guidelines` - Frontend development standards
-- `@systematic-debugging` - Debug performance issues
-- `@senior-architect` - Architecture for performance
 
 ## Additional Resources
 

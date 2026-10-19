@@ -1,11 +1,10 @@
 {
   "name": "stack-pack",
   "description": "Stack-specific skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/python-patterns",
-    "./skills/docker-expert",
-    "./skills/security-compliance"
+    "./skills/docker-expert"
   ],
   "author": { "name": "Iah-Uch" },
   "license": "MIT"
