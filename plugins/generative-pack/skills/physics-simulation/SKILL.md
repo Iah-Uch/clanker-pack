@@ -1,6 +1,6 @@
 ---
 name: physics-simulation
-description: Use when simulating or rendering physical systems: rigid bodies, joints, cloth and position-based dynamics, springs, fluids (grid, SPH, lattice Boltzmann), PDE and finite volume solvers, waves, reaction-diffusion, structural or topology optimization, N-body, molecular dynamics, particle transport, traffic, path tracing, optics, atmosphere or pigment color mixing. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries.
+description: "Use when simulating or rendering physical systems: rigid bodies, joints, cloth and position-based dynamics, springs, fluids (grid, SPH, lattice Boltzmann), PDE and finite volume solvers, waves, reaction-diffusion, structural or topology optimization, N-body, molecular dynamics, particle transport, traffic, path tracing, optics, atmosphere or pigment color mixing. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries."
 ---
 
 # Physics and numerical simulation

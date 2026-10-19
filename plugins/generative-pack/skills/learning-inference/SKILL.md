@@ -1,6 +1,6 @@
 ---
 name: learning-inference
-description: Use when a task involves learned models for creative or perceptual work: diffusion and flow matching, video, music, speech and audio models, Gaussian splatting, NeRF and single-image 3D, monocular depth, segmentation and tracking, super-resolution, OCR, neural cellular automata, embeddings and UMAP, game self-play, robot learning, typed decision engines. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries.
+description: "Use when a task involves learned models for creative or perceptual work: diffusion and flow matching, video, music, speech and audio models, Gaussian splatting, NeRF and single-image 3D, monocular depth, segmentation and tracking, super-resolution, OCR, neural cellular automata, embeddings and UMAP, game self-play, robot learning, typed decision engines. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries."
 ---
 
 # Learning and inference

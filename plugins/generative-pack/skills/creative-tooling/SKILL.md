@@ -1,6 +1,6 @@
 ---
 name: creative-tooling
-description: Use when choosing or designing the toolchain for creative and generative work: sketch frameworks (p5, canvas-sketch, openFrameworks, Cinder), 2D and 3D rendering libraries (PixiJS, Three.js, React Three Fiber, regl, Babylon.js, Vello), audio DSP languages (Faust, SuperCollider), shader sandboxes, GPU kernels in Python (Taichi), node-graph generation (ComfyUI), voxel and 3D editors, in-browser emulation. A catalog of designs and trade-offs to reason from, not a set of drop-in libraries.
+description: "Use when choosing or designing the toolchain for creative and generative work: sketch frameworks (p5, canvas-sketch, openFrameworks, Cinder), 2D and 3D rendering libraries (PixiJS, Three.js, React Three Fiber, regl, Babylon.js, Vello), audio DSP languages (Faust, SuperCollider), shader sandboxes, GPU kernels in Python (Taichi), node-graph generation (ComfyUI), voxel and 3D editors, in-browser emulation. A catalog of designs and trade-offs to reason from, not a set of drop-in libraries."
 ---
 
 # Creative tooling
