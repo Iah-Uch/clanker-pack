@@ -1,6 +1,6 @@
 ---
 name: audio-signal
-description: Use when synthesizing, analyzing or encoding audio and other signals: oscillators, filters, envelopes, FM, effects, Web Audio scheduling, DSP libraries, FFT and spectrograms, MFCCs, onset and pitch detection, music information retrieval, images as audio (SSTV), time-frequency analysis of scientific signals, tomographic reconstruction. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries.
+description: "Use when synthesizing, analyzing or encoding audio and other signals: oscillators, filters, envelopes, FM, effects, Web Audio scheduling, DSP libraries, FFT and spectrograms, MFCCs, onset and pitch detection, music information retrieval, images as audio (SSTV), time-frequency analysis of scientific signals, tomographic reconstruction. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries."
 ---
 
 # Audio and signal processing
