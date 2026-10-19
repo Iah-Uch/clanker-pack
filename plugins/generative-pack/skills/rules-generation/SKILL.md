@@ -1,6 +1,6 @@
 ---
 name: rules-generation
-description: Use when generating content from rules or randomness: noise (Perlin, simplex, Worley), L-systems, grammars, rewrite rules, wave function collapse, cellular automata, Lenia, diffusion-limited aggregation, differential growth, space colonization, slime or agent simulations, fractal flames, procedural art, brush or sketch rendering, aperiodic tilings, procedural maps or puzzle search. A catalog of techniques with mechanisms, to reason from, not a set of drop-in libraries.
+description: "Use when generating content from rules or randomness: noise (Perlin, simplex, Worley), L-systems, grammars, rewrite rules, wave function collapse, cellular automata, Lenia, diffusion-limited aggregation, differential growth, space colonization, slime or agent simulations, fractal flames, procedural art, brush or sketch rendering, aperiodic tilings, procedural maps or puzzle search. A catalog of techniques with mechanisms, to reason from, not a set of drop-in libraries."
 ---
 
 # Rules and generation

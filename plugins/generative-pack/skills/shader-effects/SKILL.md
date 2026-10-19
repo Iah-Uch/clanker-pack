@@ -1,6 +1,6 @@
 ---
 name: shader-effects
-description: Use when writing shaders and screen effects: antialiased edges, blend modes, dithering, halftone, Gaussian blur, FXAA, color lookup tables, Blinn-Phong, hatching, bloom, depth of field, motion blur, SSAO, outlines, glitch, datamosh, fog, kaleidoscope, watercolor, video-synth chains, software rasterizers, terrain by heightmap, line integral convolution of vector fields. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries.
+description: "Use when writing shaders and screen effects: antialiased edges, blend modes, dithering, halftone, Gaussian blur, FXAA, color lookup tables, Blinn-Phong, hatching, bloom, depth of field, motion blur, SSAO, outlines, glitch, datamosh, fog, kaleidoscope, watercolor, video-synth chains, software rasterizers, terrain by heightmap, line integral convolution of vector fields. A catalog of techniques with mechanisms and formulas, to reason from, not a set of drop-in libraries."
 ---
 
 # Shader and effect techniques
