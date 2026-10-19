@@ -2,11 +2,10 @@
   "name": "clanker-pack",
   "owner": { "name": "Iah-Uch" },
   "plugins": [
-    { "name": "senior-pack",  "source": "./plugins/senior-pack",  "version": "1.0.0", "description": "Senior role skills" },
     { "name": "ui-pack",      "source": "./plugins/ui-pack",      "version": "1.1.0", "description": "UI/UX skills" },
-    { "name": "quality-pack", "source": "./plugins/quality-pack", "version": "1.0.0", "description": "Code quality skills" },
+    { "name": "quality-pack", "source": "./plugins/quality-pack", "version": "1.1.0", "description": "Research-backed writing skills" },
     { "name": "tools-pack",   "source": "./plugins/tools-pack",   "version": "1.0.0", "description": "Utility skills" },
-    { "name": "stack-pack",   "source": "./plugins/stack-pack",   "version": "1.0.0", "description": "Stack-specific skills" },
+    { "name": "stack-pack",   "source": "./plugins/stack-pack",   "version": "1.1.0", "description": "Stack-specific skills" },
     { "name": "generative-pack", "source": "./plugins/generative-pack", "version": "0.8.0", "description": "Generative and creative coding technique references, sorted by field" }
   ]
 }

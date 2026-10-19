@@ -1,17 +1,16 @@
 # clanker-pack
 
-A personal Claude Code plugin marketplace — 34 skills across 6 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
+A personal Claude Code plugin marketplace — 23 skills across 5 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
 
 ## Install
 
 ```
 /plugin marketplace add Iah-Uch/clanker-pack
 
-/plugin install senior-pack@clanker-pack    # role-level engineering depth
 /plugin install ui-pack@clanker-pack         # design systems, theming, perf
-/plugin install quality-pack@clanker-pack    # review, debugging, git, guidelines
+/plugin install quality-pack@clanker-pack    # research-backed writing
 /plugin install tools-pack@clanker-pack      # diagrams, PDFs, testing, file org
-/plugin install stack-pack@clanker-pack      # Docker, Python, security & compliance
+/plugin install stack-pack@clanker-pack      # Docker, Python
 /plugin install generative-pack@clanker-pack # generative and creative-coding techniques
 ```
 
@@ -25,32 +24,15 @@ Update after new skills land:
 
 | Pack | Skills | Focus |
 |------|:------:|-------|
-| **senior-pack** | 6 | Senior-role engineering: architecture, backend, frontend, fullstack, QA, security |
-| **quality-pack** | 5 | How the work gets done well: code review, debugging, git discipline, guidelines, writing |
+| **quality-pack** | 1 | Research-backed writing |
 | **ui-pack** | 5 | Design systems, Tailwind v4, theming, asset sourcing, web performance |
 | **tools-pack** | 4 | Diagrams, PDF processing, web-app testing, file organization |
-| **stack-pack** | 3 | Stack-specific depth: Docker, Python, security & compliance |
+| **stack-pack** | 2 | Stack-specific depth: Docker, Python |
 | **generative-pack** | 11 | Generative and creative-coding techniques by field (motion, geometry, rules and generation, physics, creative tooling, learning and inference, data and spatial, audio, shaders, image and color) |
 
 ## Packs
 
-### senior-pack — role-level engineering
-Skills that behave like a senior engineer in a given discipline: opinionated, trade-off-aware, stack-specific.
-
-- **senior-architect** — system design, architecture diagrams, tech-stack decision frameworks, dependency analysis, integration patterns.
-- **senior-backend** — API scaffolding, database optimization, auth, business logic, performance tuning (Node, Express, Go, Python, Postgres, GraphQL, REST).
-- **senior-frontend** — component scaffolding, performance/bundle optimization, state management, UI best practices (React, Next.js, TypeScript, Tailwind).
-- **senior-fullstack** — end-to-end project scaffolding, code-quality analysis, architecture patterns, dev-workflow setup.
-- **senior-qa** — test strategy, suite generation, coverage analysis, E2E setup, quality metrics.
-- **senior-security** — security architecture, penetration testing, threat modeling, crypto implementation, audits.
-
-### quality-pack — how the work gets done
-The discipline layer: process skills that keep output correct, reviewable, and honestly reported.
-
-- **code-reviewer** — automated analysis, best-practice and security scanning, review checklists (TS/JS, Python, Swift, Kotlin, Go).
-- **coding-guidelines** — behavioral guardrails that cut common LLM coding mistakes during implementation.
-- **git-workflow** — atomic commits, why-focused conventional messages, the human-approval gate before committing, feature-branch flow, `--no-ff` merges, human-only authorship.
-- **systematic-debugging** — reproduce → read the error → hypothesize → test → fix at root cause, before proposing changes.
+### quality-pack — writing
 - **content-research-writer** — research-backed writing with citations, hooks, outline iteration, and section-level feedback.
 
 ### ui-pack — design & front-of-house
@@ -69,7 +51,6 @@ The discipline layer: process skills that keep output correct, reviewable, and h
 ### stack-pack — stack-specific depth
 - **docker-expert** — multi-stage builds, image-size optimization, container security, Compose orchestration, prod deployment.
 - **python-patterns** — framework selection, async patterns, type hints, project structure — teaches the decision, not a copy-paste.
-- **security-compliance** — defense-in-depth architecture, SOC2/ISO27001/GDPR/HIPAA compliance, threat modeling, incident response, secure SDLC.
 
 ### generative-pack — creative-coding techniques by field
 Reference skills in the style of the big web-dev ones: a short `SKILL.md` that routes by goal, with per-project detail under `references/`. Each entry names a real open-source project, its verified license, the technique it embodies and how to reuse the idea without the library. These are catalogs of ideas to enrich reasoning, not drop-in solutions.
