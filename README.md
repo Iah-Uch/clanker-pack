@@ -1,6 +1,6 @@
 # clanker-pack
 
-A personal Claude Code plugin marketplace — 16 skills across 4 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
+A personal Claude Code plugin marketplace — 16 skills across 4 focused packs. Each pack is a plugin you install independently. An installed skill adds its description to every session's skill list, and Claude loads the full skill only when the description matches the task. Install only the packs you use.
 
 ## Install
 
@@ -61,15 +61,14 @@ Reference skills in the style of the big web-dev ones: a short `SKILL.md` that r
 The packs share a point of view:
 
 - **Skills teach judgment, not recipes.** The Python and Tailwind skills explicitly teach *how to decide*, not snippets to paste.
-- **Trigger-scoped loading.** A skill's description is a precise "use when…" so Claude loads it exactly when relevant and ignores it otherwise — keeping context lean.
-- **Process before implementation.** Debugging, review, and git skills gate *how* work happens; they run before the domain skills that do it.
-- **The human owns and approves the work.** Nothing commits without explicit approval, and work is never attributed to the AI.
+- **Trigger-scoped loading.** A skill's description is a precise "use when…" so Claude loads the full skill when it is relevant and ignores it otherwise.
+- **Nothing ships unchecked.** `scripts/check.py` runs in CI. It fails on broken frontmatter, scripts that a skill references but does not ship, plugin manifests that disagree with the marketplace, and a wrong skill count in this file.
 - **One capability per skill.** Small, composable, independently installable — pick the packs you want.
 
 ## Attribution
 
-Not everything here is mine. This repo is a mix of skills I built and ones I found useful around the web and collected into one place. Credit for the latter belongs to their original authors.
+Not everything here is mine. Four skills come from other MIT-licensed projects. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) names each one, its upstream repository, and its copyright notice.
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).
