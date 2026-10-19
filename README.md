@@ -1,15 +1,14 @@
 # clanker-pack
 
-A personal Claude Code plugin marketplace — 23 skills across 5 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
+A personal Claude Code plugin marketplace — 16 skills across 4 focused packs. Each pack is a plugin you install independently; each skill loads only when its triggers match, so you carry the capability without paying the context cost until you need it.
 
 ## Install
 
 ```
 /plugin marketplace add Iah-Uch/clanker-pack
 
-/plugin install ui-pack@clanker-pack         # design systems, theming, perf
-/plugin install quality-pack@clanker-pack    # research-backed writing
-/plugin install tools-pack@clanker-pack      # diagrams, PDFs, testing, file org
+/plugin install ui-pack@clanker-pack         # Tailwind v4, asset sourcing
+/plugin install tools-pack@clanker-pack      # diagrams
 /plugin install stack-pack@clanker-pack      # Docker, Python
 /plugin install generative-pack@clanker-pack # generative and creative-coding techniques
 ```
@@ -24,29 +23,19 @@ Update after new skills land:
 
 | Pack | Skills | Focus |
 |------|:------:|-------|
-| **quality-pack** | 1 | Research-backed writing |
-| **ui-pack** | 5 | Design systems, Tailwind v4, theming, asset sourcing, web performance |
-| **tools-pack** | 4 | Diagrams, PDF processing, web-app testing, file organization |
+| **ui-pack** | 2 | Tailwind v4, asset sourcing |
+| **tools-pack** | 1 | Diagrams |
 | **stack-pack** | 2 | Stack-specific depth: Docker, Python |
 | **generative-pack** | 11 | Generative and creative-coding techniques by field (motion, geometry, rules and generation, physics, creative tooling, learning and inference, data and spatial, audio, shaders, image and color) |
 
 ## Packs
 
-### quality-pack — writing
-- **content-research-writer** — research-backed writing with citations, hooks, outline iteration, and section-level feedback.
-
 ### ui-pack — design & front-of-house
-- **ui-design-system** — design tokens, component docs, responsive calculations, design→dev handoff.
 - **tailwind-patterns** — Tailwind v4 CSS-first config, container queries, design-token architecture.
-- **theme-factory** — apply one of 10 preset themes (or generate one) to slides, docs, reports, landing pages.
 - **design-asset-sourcing** — vetted library of free illustrations, icons, SVG logos, stock photos, placeholders, patterns, fonts, palettes, UI blocks and mockup tools, with verified fetch endpoints, license rules, and a gate on whether the task needs an asset at all.
-- **web-performance-optimization** — Core Web Vitals, loading speed, bundle size, caching, runtime performance.
 
 ### tools-pack — utilities
 - **mermaid-diagrams** — class, sequence, flowchart, ERD, C4, state, git-graph, gantt diagrams from plain requests.
-- **pdf-processing-pro** — production PDF workflows: forms, tables, OCR, validation, batch operations.
-- **webapp-testing** — drive and test local web apps with Playwright: verify UI, capture screenshots, read browser logs.
-- **file-organizer** — context-aware cleanup: dedupe, restructure, and reorganize directories.
 
 ### stack-pack — stack-specific depth
 - **docker-expert** — multi-stage builds, image-size optimization, container security, Compose orchestration, prod deployment.
