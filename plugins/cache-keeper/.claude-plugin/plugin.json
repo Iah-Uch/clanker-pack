@@ -1,0 +1,7 @@
+{
+  "name": "cache-keeper",
+  "description": "Keeps the one-hour prompt cache warm during breaks and holds a cold send once, with its rewrite price.",
+  "version": "0.1.0",
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}

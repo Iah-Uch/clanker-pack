@@ -1,0 +1,7 @@
+{
+  "name": "reread-guard",
+  "description": "Refuses a repeat Read of a large file that has not changed, so its text is not paid for twice.",
+  "version": "0.1.0",
+  "author": { "name": "Iah-Uch" },
+  "license": "MIT"
+}
