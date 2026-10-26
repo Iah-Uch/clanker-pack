@@ -99,10 +99,12 @@ def main() -> int:
     marketplace = read_json(ROOT / ".claude-plugin" / "marketplace.json")
     plugins = marketplace.get("plugins", [])
     skills = sum(check_plugin(entry) for entry in plugins)
-    check_readme_count(skills, len(plugins))
+    # A mod is a plugin with hooks and no skills; the README counts skill packs only.
+    packs = sum(1 for entry in plugins if (ROOT / entry["source"] / "skills").is_dir())
+    check_readme_count(skills, packs)
     for message in errors:
         print(f"FAIL {message}")
-    print(f"{len(plugins)} plugins, {skills} skills, {len(errors)} problems")
+    print(f"{len(plugins)} plugins, {skills} skills in {packs} packs, {len(errors)} problems")
     return 1 if errors else 0
 
 
