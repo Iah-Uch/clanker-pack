@@ -13,6 +13,13 @@ A personal Claude Code plugin marketplace — 16 skills across 4 focused packs. 
 /plugin install generative-pack@clanker-pack # generative and creative-coding techniques
 ```
 
+Two mods, installed the same way:
+
+```
+/plugin install cache-keeper@clanker-pack   # keeps the prompt cache warm, holds a cold send once
+/plugin install reread-guard@clanker-pack   # refuses a repeat Read of an unchanged large file
+```
+
 Update after new skills land:
 
 ```
@@ -56,6 +63,13 @@ Reference skills in the style of the big web-dev ones: a short `SKILL.md` that r
 - **shader-effects** — antialiasing, blending, dithering, blur, post-processing effects, software rasterizers, vector-field visualization.
 - **image-color-vector** — color spaces and scales, quantization, vector tracing, image art algorithms, image and video tools, distance-field text.
 
+## Mods
+
+A mod is a plugin with hooks instead of skills. It runs unsandboxed and sees the whole session, so each one lists the engine calls it makes and ships its tests. Read the source before you install one.
+
+- **cache-keeper** — keeps the one-hour prompt cache warm during breaks, refuses a cold send once with its rewrite price, and reports cache breaks. Follows the design of cache-tax.
+- **reread-guard** — refuses a repeat `Read` of an unchanged file of 8 KB or more, so its text is not added to the context twice.
+
 ## Design heuristics
 
 The packs share a point of view:
@@ -67,7 +81,7 @@ The packs share a point of view:
 
 ## Attribution
 
-Not everything here is mine. Four skills come from other MIT-licensed projects. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) names each one, its upstream repository, and its copyright notice.
+Not everything here is mine. Four skills and one mod come from other MIT-licensed projects. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) names each one, its upstream repository, and its copyright notice.
 
 ## License
 
