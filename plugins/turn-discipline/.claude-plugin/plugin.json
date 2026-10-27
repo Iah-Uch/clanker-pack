@@ -1,7 +1,7 @@
 {
   "name": "turn-discipline",
-  "description": "Mod: a hard per-prompt budget of tool calls and time, a cap on huge Bash output, and a short rules section that makes Claude read your intent first and keep jobs small.",
-  "version": "0.1.0",
+  "description": "Mod: a hard per-prompt budget of tool calls and time, a cap on huge Bash output.",
+  "version": "0.1.1",
   "skills": [
     "./skills/speed-setup"
   ],

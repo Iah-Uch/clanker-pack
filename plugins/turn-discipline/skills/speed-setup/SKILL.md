@@ -19,7 +19,20 @@ Read `~/.claude/settings.json` and report these three values:
 
 Ask before changing a value. Apply with Edit on the file, or tell the user which slash command to run.
 
-## 2. Turn a big job into slices
+## 2. Add the rules to CLAUDE.md
+
+Check `~/.claude/CLAUDE.md` (or the project's) for a "Turn discipline" block. If it is missing, show this block and add it after the user agrees:
+
+```
+## Turn discipline
+- Read intent first. For a broad or vague request, work out what the user is trying to achieve and state it as a sharp spec in at most 4 lines: goal, scope, done-when, assumed defaults. Then do that. Ask one question only when two readings give very different results.
+- Size the job. One screen or one bug is a small job: finish it in under 15 tool calls. Bigger work is a plan: split it into slices, do the first, report.
+- Batch independent reads and searches into one response. Change files with Edit, not whole-file shell rewrites. Run lint and tests once per slice.
+- Do not read PDFs or take screenshots unless the task needs them. Large Bash output is cut and saved to a file: read ranges of it.
+- Each turn has a budget of tool calls and time. When a call is denied for budget, stop and report what is done and what is left.
+```
+
+## 3. Turn a big job into slices
 
 1. Write a plan file, for example `docs/PLAN.md`. One slice per line, each small enough for under 15 tool calls: `- [ ] what to change, in which files, done when`.
 2. Run `scripts/run-slices.sh docs/PLAN.md --dry-run` to see the first slice.
@@ -30,6 +43,6 @@ Env: `SLICE_MODEL` (default `sonnet`), `SLICE_EFFORT` (`low`), `SLICE_TIMEOUT` (
 
 Run slices one at a time. Do not run them in parallel: cost rises with every extra run.
 
-## 3. Check it works
+## 4. Check it works
 
 Run `/budget` in the session. It shows calls and seconds used this turn, and how much Bash output was kept out of context. If the command is missing, the mod is not installed: `/plugin install turn-discipline@clanker-pack`.

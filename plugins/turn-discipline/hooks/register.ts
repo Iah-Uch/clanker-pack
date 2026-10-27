@@ -14,15 +14,6 @@ const SPILL_MAX_AGE_MINUTES = 1440
 // These prompt origins are the person speaking. A task notification or a trigger is not a new turn.
 const HUMAN = new Set(['composer', 'bridge', 'sdk'])
 
-const RULES = [
-  'Turn discipline (turn-discipline plugin):',
-  '- Read intent first. When a request is broad or vague, do not follow its words literally. Work out what the user is trying to achieve. State it as a sharp spec in at most 4 lines: goal, scope, done-when, and the defaults you assume. Then do that. Ask one question only when two readings give very different results.',
-  '- Size the job. One screen or one bug is a small job: finish it in under 15 tool calls. Bigger work is a plan: split it into slices, do the first, report.',
-  '- Batch independent reads and searches into one response. Change files with Edit, not whole-file rewrites through the shell. Run lint and tests once per slice.',
-  '- Do not read PDFs or take screenshots unless the task needs them. Large Bash output is cut and saved to a file: read ranges of that file, never the whole thing.',
-  '- Each turn has a budget of tool calls and time. When a call is denied for budget, stop and report what is done and what is left.',
-].join('\n')
-
 type Turn = { startedMs: number; calls: number; factor: number }
 
 function spillPath(id: string | undefined): string {
@@ -62,7 +53,7 @@ export const register: Register = on => {
 
   on('command.run', { command: 'budget' }, () => ({
     text:
-      `turn-discipline: ${turn.calls}/${MAX_CALLS * turn.factor} calls, ` +
+      `${turn.calls}/${MAX_CALLS * turn.factor} calls, ` +
       `${Math.round((Date.now() - turn.startedMs) / 1000)}/${MAX_SECONDS * turn.factor}s this turn. ` +
       `${capped} Bash output${capped === 1 ? '' : 's'} cut, about ${Math.round(keptChars / 4 / 1000)}k tokens kept out of context.`,
   }))
@@ -73,11 +64,6 @@ export const register: Register = on => {
     }
     return next(e)
   }).catch(($, e, next) => next(e))
-
-  on('prompt.compose', async ($, e, next) => {
-    const r = await next(e)
-    return { sections: [...r.sections, { id: 'turn-discipline:rules', text: RULES, scope: 'session' as const }] }
-  })
 
   on('tool.call', async ($, e, next) => {
     // A subagent runs its own loop under its own limits.

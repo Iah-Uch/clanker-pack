@@ -18,7 +18,7 @@ Three mods, installed the same way:
 ```
 /plugin install cache-keeper@clanker-pack   # keeps the prompt cache warm, holds a cold send once
 /plugin install reread-guard@clanker-pack   # refuses a repeat Read of an unchanged large file
-/plugin install turn-discipline@clanker-pack # budget per prompt, cap on huge Bash output, intent-first rules, slice runner
+/plugin install turn-discipline@clanker-pack # budget per prompt, cap on huge Bash output, slice runner
 ```
 
 Update after new skills land:
@@ -70,7 +70,7 @@ Reference skills in the style of the big web-dev ones: a short `SKILL.md` that r
 A mod is a plugin with hooks instead of skills. It runs unsandboxed and sees the whole session, so each one lists the engine calls it makes and ships its tests. Read the source before you install one.
 
 - **cache-keeper** — keeps the one-hour prompt cache warm during breaks, refuses a cold send once with its rewrite price, and reports cache breaks. Follows the design of cache-tax.
-- **turn-discipline** — denies tool calls past 40 per prompt or 10 minutes, cuts Bash output over 8 KB to a head and a tail with the full text in a file, and adds a rules section that reads your intent first. Ships the `speed-setup` skill and a slice runner.
+- **turn-discipline** — denies tool calls past 40 per prompt or 10 minutes, cuts Bash output over 8 KB to a head and a tail with the full text in a file. Ships the `speed-setup` skill and a slice runner.
 - **reread-guard** — refuses a repeat `Read` of an unchanged file of 8 KB or more, so its text is not added to the context twice.
 
 ## Design heuristics
