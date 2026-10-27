@@ -119,8 +119,6 @@ const receipt = atom({ plugin: 'flightdeck-keeper', key: 'receipt' } as const, n
 const view = atom({ plugin: 'flightdeck-keeper', key: 'view' } as const, DEFAULT_VIEW)
 const roster = atom({ plugin: 'flightdeck-keeper', key: 'roster' } as const, DEFAULT_ROSTER)
 
-type ServerBlock = { type: string; id?: string; name?: string; tool_use_id?: string }
-
 // Every read goes through these, so a value saved under an older shape still reads.
 async function getMain($: EngineInterface): Promise<Main> {
   return normalize(DEFAULT_MAIN, await read($, main))
@@ -596,11 +594,6 @@ export const register: Register = (on, options) => {
     return { text: 'Flightdeck opened. Focus it with ctrl+x tab; 1-6 expand cards, f/s/o open the gate rows.' }
   })
 
-  on('classic.UserPromptSubmit', async ($, e, next) => {
-    await noteMode($, e.permission_mode)
-    return next(e)
-  })
-
   on('agent.offer', async ($, e, next) => {
     const offered = await next(e)
     if (cfg.architect.test(e.agent) || (cfg.matchDescriptions && cfg.architect.test(e.description))) {
@@ -797,31 +790,6 @@ export const register: Register = (on, options) => {
   })
 
   // A server-side review tool never reaches tool.call: it shows only in the assistant's rows.
-  on('session.append', async ($, e, next) => {
-    if (!e.agentId && e.message.type === 'assistant') {
-      const a = await getArchitect($)
-      // Consults this row opened: their result may be in the same row, after the stale read above.
-      const opened = new Set<string>()
-      for (const block of e.message.content as unknown as readonly ServerBlock[]) {
-        if (block.type === 'server_tool_use' && block.name && block.id && cfg.architect.test(block.name)) {
-          if (a.seen.includes(block.id)) continue
-          const id = block.id
-          await update($, architect, x => {
-            const y = normalize(DEFAULT_ARCHITECT, x)
-            return { ...y, seen: [...listOf<string>(y.seen), id].slice(-60) }
-          })
-          opened.add(id)
-          await consultStarted($, cfg, id, `${block.name} tool`)
-        } else if (block.type.endsWith('_tool_result') && block.tool_use_id) {
-          const id = block.tool_use_id
-          const isOpen = opened.has(id) || (await getArchitect($)).consults.some(c => c.id === id && c.endAt === null)
-          if (isOpen) await consultEnded($, cfg, null, id)
-        }
-      }
-    }
-    return next(e)
-  })
-
   on('agent.spawn', async ($, e, next) => {
     const started = await next(e)
     if (!e.parentAgentId) await noteMode($, e.permissionMode)

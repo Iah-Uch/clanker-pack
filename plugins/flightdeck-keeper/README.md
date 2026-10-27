@@ -10,6 +10,8 @@
 - `/keepwarm` works as in `cache-keeper`: `on`, `off`, a window such as `90m`, `status`, `guard warn|refuse`.
 - A cold send of 50k tokens or more is held once with its price. Send it again to pay it.
 
+- Two Flightdeck hooks are removed: `classic.UserPromptSubmit` and `session.append`. A security plugin that runs above mods bypasses both, and each bypass printed a notice into the chat. The permission mode still comes from `turn.start`. The server-side `advisor` tool is no longer tracked; a subagent architect still is.
+
 Everything else is Flightdeck 0.5.1. Its commands and settings are unchanged. See its README for the panels.
 
 ## Install

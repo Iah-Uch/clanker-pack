@@ -352,31 +352,6 @@ test('subagents become cards, then swimlanes past the card limit; a card expands
   }
 })
 
-test('the server-side advisor is read from assistant rows: consulting, then on call', async ($, on) => {
-  engine(on)
-  await $.turn.start({ text: 'plan it', turnId: 'T2' })
-  const row = (content: unknown[]) =>
-    $.session
-      .append({
-        message: { type: 'assistant', role: 'assistant', content: content as never },
-        door: 'response',
-        origin: { kind: 'model', model: 'claude-opus-5-5' } as never,
-        uuid: `u${++spawnN}`,
-      })
-      .catch(() => undefined) // the test has no transcript to store rows in
-  await row([{ type: 'server_tool_use', id: 'srv1', name: 'advisor', input: {} }])
-  const mid = await $.ui.mount({ ...pane(64), surface: 'terminal' })
-  expect(await mid.find({ text: /ARCHITECT · advising/ })).toBeDefined()
-  expect(await mid.find({ text: /◆ before a plan/ })).toBeDefined()
-  await mid.unmount()
-
-  await row([{ type: 'advisor_tool_result', tool_use_id: 'srv1', content: { type: 'advisor_redacted_result' } }])
-  const after = await $.ui.mount({ ...pane(64), surface: 'terminal' })
-  expect(await after.find({ text: /ARCHITECT · on call/ })).toBeDefined()
-  expect(await after.find({ text: /^1$/ })).toBeDefined()
-  await after.unmount()
-})
-
 test('the gate strip fills from checks and a row opens its redacted drill-down', async ($, on) => {
   engine(on)
   on('tool.check', (_$, e) => ({ decision: e.tool === 'Read' ? 'allow' : 'ask' }))
@@ -401,34 +376,6 @@ test('config changes labels, hides panels and turns the moments off', { options:
   expect(await ui.find({ text: /REVIEWER · advising/ })).toBeDefined()
   expect(await ui.find({ text: /permissions/ })).toBeUndefined()
   expect(await ui.find({ text: /before a plan/ })).toBeUndefined()
-  await ui.unmount()
-})
-
-test('a consult whose start and result share one row closes, and its review flag with it', async ($, on) => {
-  engine(on)
-  on('tool.call', () => ({ result: {}, text: 'ok' }))
-  await $.turn.start({ text: 'go', turnId: 'T4' })
-  // An edit first, so the consult is inferred as "before done" and sets the review flag.
-  await $.tool.call({ tool: 'Edit', file_path: '/x.ts', old_string: 'a', new_string: 'b' } as never)
-  await $.session
-    .append({
-      message: {
-        type: 'assistant',
-        role: 'assistant',
-        content: [
-          { type: 'server_tool_use', id: 'srv9', name: 'advisor', input: {} },
-          { type: 'advisor_tool_result', tool_use_id: 'srv9', content: { type: 'advisor_redacted_result' } },
-        ] as never,
-      },
-      door: 'response',
-      origin: { kind: 'model', model: 'claude-opus-5-5' } as never,
-      uuid: 'one-row',
-    })
-    .catch(() => undefined)
-  const ui = await $.ui.mount({ ...pane(64), surface: 'terminal' })
-  expect(await ui.find({ text: /ARCHITECT · on call/ })).toBeDefined()
-  expect(await ui.find({ text: /◆ before done/ })).toBeDefined()
-  expect(await ui.find({ text: /reviewing before done/ })).toBeUndefined()
   await ui.unmount()
 })
 
@@ -538,14 +485,6 @@ test('on a graphical surface, rows of marks hold fewer marks, keep the newest an
   const s = $.turn.step({ turnId: 'G1', index: 0, model: 'claude-opus-5-5', messageCount: 1, agentId: 'wf1' })
   for await (const _ of s) void _
   await s.result
-  await $.session
-    .append({
-      message: { type: 'assistant', role: 'assistant', content: [{ type: 'server_tool_use', id: 'srvG', name: 'advisor', input: {} }] as never },
-      door: 'response',
-      origin: { kind: 'model', model: 'claude-opus-5-5' } as never,
-      uuid: 'marks-row',
-    })
-    .catch(() => undefined)
   for (const surface of ['terminal', 'desktop', 'vscode', 'mobile'] as const) {
     for (const cols of [40, 64, 120]) {
       const ui = await $.ui.mount({ ...pane(cols), surface })
@@ -556,7 +495,6 @@ test('on a graphical surface, rows of marks hold fewer marks, keep the newest an
       expect(strip?.text.length).toBe(surface !== 'terminal' && cols === 40 ? 24 : 30)
       expect(strip?.text.endsWith('✗')).toBe(true)
       expect((await ui.find({ type: 'Text', text: /^●$/ }))?.props.wrap).toBe('truncate-start')
-      expect((await ui.find({ type: 'Text', text: /^[─━◆]+$/ }))?.props.wrap).toBe('truncate-middle')
       expect((await ui.find({ key: 'legend' }))?.props.marginBottom).toBe(surface === 'terminal' ? 0 : 1)
       await ui.unmount()
     }
