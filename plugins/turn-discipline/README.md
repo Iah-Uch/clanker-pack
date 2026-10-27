@@ -6,8 +6,7 @@ A Claude Code mod and a setup skill that keep sessions short, cheap and on targe
 
 - **Turn budget.** A turn is one prompt from you and everything Claude does before it answers. Past 40 tool calls or 10 minutes, every tool call is denied, and Claude has to stop and report what is done and what is left. Put `#long` in a prompt to raise both limits four times for that turn. A subagent has its own limits.
 - **Output cap.** Bash output over 8,000 characters is cut to its first and last 2,000 characters. The full text goes to a file under `/tmp/turn-discipline/`, and the cut text names it, so Claude can read a range instead of repeating the command. Files older than 24 hours are deleted when a session starts, and `/tmp` clears on reboot.
-- **Rules section.** Adds a short block to the system prompt: read the intent behind a broad request and state it as a sharp spec before acting, size the job, batch independent calls, edit instead of rewriting, and stop when the budget is gone.
-- **Setup skill.** `speed-setup` checks effort and compaction settings and runs a plan one slice at a time, each slice in a fresh context.
+- **Setup skill.** `speed-setup` checks effort and compaction settings, adds a short rules block to your `CLAUDE.md` (read intent first, size the job, batch calls, stop at the budget), and runs a plan one slice at a time, each slice in a fresh context. The rules go in `CLAUDE.md` because the engine skips a plugin's `prompt.compose` hook.
 
 ## Commands
 

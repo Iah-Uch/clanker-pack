@@ -10,6 +10,6 @@
     { "name": "cache-keeper", "source": "./plugins/cache-keeper", "version": "0.1.0", "description": "Mod: keeps the prompt cache warm and holds a cold send once" },
     { "name": "flightdeck-keeper", "source": "./plugins/flightdeck-keeper", "version": "0.1.1", "description": "Mod: Flightdeck agent dashboard with the prompt-cache keeper built in" },
     { "name": "reread-guard", "source": "./plugins/reread-guard", "version": "0.1.0", "description": "Mod: refuses a repeat Read of an unchanged large file" },
-    { "name": "turn-discipline", "source": "./plugins/turn-discipline", "version": "0.1.0", "description": "Mod: per-prompt budget of tool calls and time, a cap on huge Bash output, and rules that read intent first; with a setup skill and a slice runner" }
+    { "name": "turn-discipline", "source": "./plugins/turn-discipline", "version": "0.1.1", "description": "Mod: per-prompt budget of tool calls and time and a cap on huge Bash output; with a setup skill and a slice runner" }
   ]
 }
