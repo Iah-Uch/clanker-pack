@@ -195,6 +195,6 @@ export function paneLine(s: CacheState, now: number): { text: string; isCold: bo
   if (s.compacted) return { text: 'cache reset by compaction', isCold: false }
   if (!s.lastRequestAt) return null
   if (isCold(s, now)) return { text: `cache COLD ${fmtSpan(now - s.lastRequestAt - TTL_MS)} ago · a send re-writes ${fmtDollars(coldUsd(s))}`, isCold: true }
-  const keep = s.stopped ? `keepwarm stopped: ${s.stopped}` : s.deadline ? `ping in ${fmtSpan(s.lastRequestAt + PING_EVERY_MS - now)}` : 'keepwarm off'
+  const keep = s.stopped ? `keepwarm stopped: ${s.stopped}` : s.deadline ? `ping in ${fmtSpan(s.lastRequestAt + PING_EVERY_MS - now)}` : s.auto ? 'keepwarm auto, arms after a turn' : 'keepwarm off'
   return { text: `cache warm ${fmtSpan(s.lastRequestAt + TTL_MS - now)} · ${keep}`, isCold: false }
 }
