@@ -1,11 +1,16 @@
 import { expect, test } from 'claude-code/testing'
 
 const BIG = 'x'.repeat(20000)
+const ran: string[][] = []
 
 async function start($: any, on: any, answer: () => unknown = () => ({})) {
   on('command.register', () => ({ value: { command: 'budget' } }))
   on('session.start', (_: any, e: any) => ({ cwd: e.cwd }))
   on('fs.write', () => ({ value: undefined }))
+  on('process.run', (_: any, e: any) => {
+    ran.push(e.argv)
+    return { value: { exitCode: 0, stdout: '', stderr: '' } }
+  })
   on('tool.call', () => ({ result: answer() }))
   await $.session.start({ cwd: '/', surface: 'terminal', isInteractive: true })
 }
@@ -54,4 +59,11 @@ test('small Bash output passes through untouched', async ($, on) => {
   await start($, on, () => ({ stdout: 'ok', stderr: '', interrupted: false }))
   const r = await $.tool.call({ tool: 'Bash', command: 'echo ok' })
   expect((r.result as { stdout: string }).stdout).toBe('ok')
+})
+
+test('a session start deletes spilled files older than a day', async ($, on) => {
+  ran.length = 0
+  await start($, on)
+  const cleanup = ran.find(argv => argv[0] === 'find')
+  expect(cleanup).toEqual(['find', '/tmp/turn-discipline', '-type', 'f', '-mmin', '+1440', '-delete'])
 })

@@ -9,6 +9,8 @@ const LONG_FACTOR = 4
 const CAP_CHARS = 8000
 const KEEP_CHARS = 2000
 const SPILL_DIR = '/tmp/turn-discipline'
+// Spilled files older than this are deleted when a session starts. /tmp also clears on reboot.
+const SPILL_MAX_AGE_MINUTES = 1440
 // These prompt origins are the person speaking. A task notification or a trigger is not a new turn.
 const HUMAN = new Set(['composer', 'bridge', 'sdk'])
 
@@ -45,6 +47,11 @@ export const register: Register = on => {
 
   on('session.start', async ($, e, next) => {
     const r = await next(e)
+    try {
+      await $.process.run(['find', SPILL_DIR, '-type', 'f', '-mmin', `+${SPILL_MAX_AGE_MINUTES}`, '-delete'])
+    } catch {
+      // Nothing to clean, or find is missing: a leftover file is harmless.
+    }
     await $.command.register({
       name: 'budget',
       description: 'Tool calls and time used this turn, and the Bash output kept out of context (turn-discipline)',
