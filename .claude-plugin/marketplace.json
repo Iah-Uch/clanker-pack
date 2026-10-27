@@ -8,6 +8,7 @@
     { "name": "stack-pack",   "source": "./plugins/stack-pack",   "version": "1.1.0", "description": "Stack-specific skills" },
     { "name": "generative-pack", "source": "./plugins/generative-pack", "version": "0.8.0", "description": "Generative and creative coding technique references, sorted by field" },
     { "name": "cache-keeper", "source": "./plugins/cache-keeper", "version": "0.1.0", "description": "Mod: keeps the prompt cache warm and holds a cold send once" },
+    { "name": "flightdeck-keeper", "source": "./plugins/flightdeck-keeper", "version": "0.1.0", "description": "Mod: Flightdeck agent dashboard with the prompt-cache keeper built in" },
     { "name": "reread-guard", "source": "./plugins/reread-guard", "version": "0.1.0", "description": "Mod: refuses a repeat Read of an unchanged large file" }
   ]
 }
