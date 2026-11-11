@@ -19,11 +19,11 @@ One mod:
 /plugin install reread-guard@clanker-pack   # refuses a repeat Read of an unchanged large file
 ```
 
-A setup skill and a slice runner for short, cheap sessions, and a bundle that installs 14 plugins from other authors. Read its README first, because the ai-memory plugin needs its binary:
+A setup skill and a slice runner for short, cheap sessions, and a bundle that installs 15 plugins from other authors. Read its README first, because the ai-memory plugin needs its binary:
 
 ```
 /plugin install turn-discipline@clanker-pack   # effort and compaction setup, slice runner
-/plugin install recommended-pack@clanker-pack  # 14 plugins from other authors
+/plugin install recommended-pack@clanker-pack  # 15 plugins from other authors
 ```
 
 Update after new skills land:
@@ -40,7 +40,7 @@ Update after new skills land:
 | **tools-pack** | 1 | Diagrams |
 | **stack-pack** | 2 | Stack-specific depth: Docker, Python |
 | **turn-discipline** | 1 | Short, cheap sessions: effort and compaction setup, slice runner |
-| **recommended-pack** | 0 | Bundle: installs 14 plugins from other authors, such as context-mode, ai-memory, superpowers and context7 |
+| **recommended-pack** | 0 | Bundle: installs 15 plugins from other authors, such as context-mode, ai-memory, superpowers and context7 |
 | **generative-pack** | 11 | Generative and creative-coding techniques by field (motion, geometry, rules and generation, physics, creative tooling, learning and inference, data and spatial, audio, shaders, image and color) |
 
 ## Packs
