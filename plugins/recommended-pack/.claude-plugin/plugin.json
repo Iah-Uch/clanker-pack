@@ -1,7 +1,7 @@
 {
   "name": "recommended-pack",
-  "description": "Installs 14 plugins from other authors, each with 15k or more GitHub stars: memory, context savings, workflow, review, docs, design and authoring tools.",
-  "version": "0.6.0",
+  "description": "Installs 15 plugins from other authors: memory, context savings, cache cost, workflow, review, docs, design and authoring tools.",
+  "version": "0.7.0",
   "dependencies": [
     "context-mode",
     "ai-memory",
@@ -37,7 +37,8 @@
     "taste-skill",
     "andrej-karpathy-skills",
     "mattpocock-skills",
-    "ui-ux-pro-max"
+    "ui-ux-pro-max",
+    "cache-tax"
   ],
   "author": {
     "name": "Iah-Uch"
