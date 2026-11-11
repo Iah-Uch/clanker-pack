@@ -1,15 +1,126 @@
 {
   "name": "clanker-pack",
-  "owner": { "name": "Iah-Uch" },
-  "metadata": { "description": "Personal marketplace of skills for UI, containers, diagrams, and generative and creative coding, plus three mods that cut token cost." },
+  "owner": {
+    "name": "Iah-Uch"
+  },
+  "metadata": {
+    "description": "Personal marketplace of skills for UI, containers, diagrams, and generative and creative coding, plus a mod that cuts token cost and a bundle of recommended plugins from other authors."
+  },
+  "allowCrossMarketplaceDependenciesOn": [
+    "claude-plugins-official"
+  ],
   "plugins": [
-    { "name": "ui-pack",      "source": "./plugins/ui-pack",      "version": "1.2.0", "description": "UI/UX skills" },
-    { "name": "tools-pack",   "source": "./plugins/tools-pack",   "version": "1.1.0", "description": "Utility skills" },
-    { "name": "stack-pack",   "source": "./plugins/stack-pack",   "version": "1.1.0", "description": "Stack-specific skills" },
-    { "name": "generative-pack", "source": "./plugins/generative-pack", "version": "0.8.0", "description": "Generative and creative coding technique references, sorted by field" },
-    { "name": "cache-keeper", "source": "./plugins/cache-keeper", "version": "0.1.0", "description": "Mod: keeps the prompt cache warm and holds a cold send once" },
-    { "name": "flightdeck-keeper", "source": "./plugins/flightdeck-keeper", "version": "0.1.1", "description": "Mod: Flightdeck agent dashboard with the prompt-cache keeper built in" },
-    { "name": "reread-guard", "source": "./plugins/reread-guard", "version": "0.1.0", "description": "Mod: refuses a repeat Read of an unchanged large file" },
-    { "name": "turn-discipline", "source": "./plugins/turn-discipline", "version": "0.1.1", "description": "Mod: per-prompt budget of tool calls and time and a cap on huge Bash output; with a setup skill and a slice runner" }
+    {
+      "name": "ui-pack",
+      "source": "./plugins/ui-pack",
+      "version": "1.3.0",
+      "description": "UI/UX skills: Tailwind v4, asset sourcing, animation craft"
+    },
+    {
+      "name": "tools-pack",
+      "source": "./plugins/tools-pack",
+      "version": "1.1.0",
+      "description": "Utility skills"
+    },
+    {
+      "name": "stack-pack",
+      "source": "./plugins/stack-pack",
+      "version": "1.1.0",
+      "description": "Stack-specific skills"
+    },
+    {
+      "name": "generative-pack",
+      "source": "./plugins/generative-pack",
+      "version": "0.8.0",
+      "description": "Generative and creative coding technique references, sorted by field"
+    },
+    {
+      "name": "reread-guard",
+      "source": "./plugins/reread-guard",
+      "version": "0.1.0",
+      "description": "Mod: refuses a repeat Read of an unchanged large file"
+    },
+    {
+      "name": "turn-discipline",
+      "source": "./plugins/turn-discipline",
+      "version": "0.2.0",
+      "description": "Setup skill for effort and compaction defaults, and a slice runner that works a plan one fresh context at a time"
+    },
+    {
+      "name": "recommended-pack",
+      "source": "./plugins/recommended-pack",
+      "version": "0.6.0",
+      "description": "Bundle: installs 14 well-starred plugins from other authors, such as context-mode, ai-memory, superpowers, context7 and ui-ux-pro-max"
+    },
+    {
+      "name": "context-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "mksglu/context-mode",
+        "path": "plugins/claude-code",
+        "sha": "ab0dcb0a0f6c9b2818963b3ff1f28513cb0d4d7d"
+      },
+      "description": "From mksglu/context-mode: keeps large tool output out of the context"
+    },
+    {
+      "name": "ai-memory",
+      "source": {
+        "source": "git-subdir",
+        "url": "akitaonrails/ai-memory",
+        "path": "plugins/claude-code",
+        "ref": "v3.4.5",
+        "sha": "ee73c04c542fa41ca629b046deb4ac108518f407"
+      },
+      "description": "From akitaonrails/ai-memory: long-term memory across sessions. Needs the ai-memory binary"
+    },
+    {
+      "name": "caveman",
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman",
+        "sha": "3dc497a7f858c774d6e15b25e8c6120ef3a0eda8"
+      },
+      "description": "From JuliusBrussee/caveman: terse-answer mode"
+    },
+    {
+      "name": "taste-skill",
+      "source": {
+        "source": "github",
+        "repo": "Leonxlnx/taste-skill",
+        "sha": "f6b76575f949707b4e3c37cd86cb44b0b98643e8"
+      },
+      "description": "From Leonxlnx/taste-skill: anti-slop design skill",
+      "version": "2.5.1",
+      "skills": [
+        "./skills/taste-skill"
+      ]
+    },
+    {
+      "name": "andrej-karpathy-skills",
+      "source": {
+        "source": "github",
+        "repo": "multica-ai/andrej-karpathy-skills",
+        "sha": "2c606141936f1eeef17fa3043a72095b4765b9c2"
+      },
+      "description": "From multica-ai: behavior rules that cut common LLM coding mistakes"
+    },
+    {
+      "name": "mattpocock-skills",
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills",
+        "sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d"
+      },
+      "description": "From mattpocock/skills: grilling, spec, tickets and TDD skills"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "sha": "6ae86f61f520d6ca229d2f40e070410638c908c5"
+      },
+      "description": "From nextlevelbuilder: UI style, palette and font database"
+    }
   ]
 }
