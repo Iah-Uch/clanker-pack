@@ -1,0 +1,46 @@
+{
+  "name": "recommended-pack",
+  "description": "Installs 14 plugins from other authors, each with 15k or more GitHub stars: memory, context savings, workflow, review, docs, design and authoring tools.",
+  "version": "0.6.0",
+  "dependencies": [
+    "context-mode",
+    "ai-memory",
+    {
+      "name": "superpowers",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "frontend-design",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "code-review",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "security-guidance",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "context7",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "skill-creator",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "hookify",
+      "marketplace": "claude-plugins-official"
+    },
+    "caveman",
+    "taste-skill",
+    "andrej-karpathy-skills",
+    "mattpocock-skills",
+    "ui-ux-pro-max"
+  ],
+  "author": {
+    "name": "Iah-Uch"
+  },
+  "license": "MIT"
+}
