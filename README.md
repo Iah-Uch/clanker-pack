@@ -1,24 +1,29 @@
 # clanker-pack
 
-A personal Claude Code plugin marketplace — 17 skills across 5 focused packs. Each pack is a plugin you install independently. An installed skill adds its description to every session's skill list, and Claude loads the full skill only when the description matches the task. Install only the packs you use.
+A personal Claude Code plugin marketplace — 22 skills across 5 focused packs. Each pack is a plugin you install independently. An installed skill adds its description to every session's skill list, and Claude loads the full skill only when the description matches the task. Install only the packs you use.
 
 ## Install
 
 ```
 /plugin marketplace add Iah-Uch/clanker-pack
 
-/plugin install ui-pack@clanker-pack         # Tailwind v4, asset sourcing
+/plugin install ui-pack@clanker-pack         # Tailwind v4, assets, animation
 /plugin install tools-pack@clanker-pack      # diagrams
 /plugin install stack-pack@clanker-pack      # Docker, Python
 /plugin install generative-pack@clanker-pack # generative and creative-coding techniques
 ```
 
-Three mods, installed the same way:
+One mod:
 
 ```
-/plugin install cache-keeper@clanker-pack   # keeps the prompt cache warm, holds a cold send once
 /plugin install reread-guard@clanker-pack   # refuses a repeat Read of an unchanged large file
-/plugin install turn-discipline@clanker-pack # budget per prompt, cap on huge Bash output, slice runner
+```
+
+A setup skill and a slice runner for short, cheap sessions, and a bundle that installs 14 plugins from other authors. Read its README first, because the ai-memory plugin needs its binary:
+
+```
+/plugin install turn-discipline@clanker-pack   # effort and compaction setup, slice runner
+/plugin install recommended-pack@clanker-pack  # 14 plugins from other authors
 ```
 
 Update after new skills land:
@@ -31,16 +36,18 @@ Update after new skills land:
 
 | Pack | Skills | Focus |
 |------|:------:|-------|
-| **ui-pack** | 2 | Tailwind v4, asset sourcing |
+| **ui-pack** | 7 | Tailwind v4, asset sourcing, animation craft |
 | **tools-pack** | 1 | Diagrams |
 | **stack-pack** | 2 | Stack-specific depth: Docker, Python |
-| **turn-discipline** | 1 | Short, cheap sessions: budget, output cap, setup and slice runner (also a mod) |
+| **turn-discipline** | 1 | Short, cheap sessions: effort and compaction setup, slice runner |
+| **recommended-pack** | 0 | Bundle: installs 14 plugins from other authors, such as context-mode, ai-memory, superpowers and context7 |
 | **generative-pack** | 11 | Generative and creative-coding techniques by field (motion, geometry, rules and generation, physics, creative tooling, learning and inference, data and spatial, audio, shaders, image and color) |
 
 ## Packs
 
 ### ui-pack — design & front-of-house
 - **tailwind-patterns** — Tailwind v4 CSS-first config, container queries, design-token architecture.
+- **emil-design-eng**, **animate**, **animation-performance**, **review-animations**, **improve-animations** — Emil Kowalski's animation and UI polish skills: when to animate, easing and duration, composite-only performance, review and audit against a craft bar.
 - **design-asset-sourcing** — vetted library of free illustrations, icons, SVG logos, stock photos, placeholders, patterns, fonts, palettes, UI blocks and mockup tools, with verified fetch endpoints, license rules, and a gate on whether the task needs an asset at all.
 
 ### tools-pack — utilities
@@ -69,8 +76,6 @@ Reference skills in the style of the big web-dev ones: a short `SKILL.md` that r
 
 A mod is a plugin with hooks instead of skills. It runs unsandboxed and sees the whole session, so each one lists the engine calls it makes and ships its tests. Read the source before you install one.
 
-- **cache-keeper** — keeps the one-hour prompt cache warm during breaks, refuses a cold send once with its rewrite price, and reports cache breaks. Follows the design of cache-tax.
-- **turn-discipline** — denies tool calls past 40 per prompt or 10 minutes, cuts Bash output over 8 KB to a head and a tail with the full text in a file. Ships the `speed-setup` skill and a slice runner.
 - **reread-guard** — refuses a repeat `Read` of an unchanged file of 8 KB or more, so its text is not added to the context twice.
 
 ## Design heuristics
@@ -84,7 +89,7 @@ The packs share a point of view:
 
 ## Attribution
 
-Not everything here is mine. Four skills and one mod come from other MIT-licensed projects. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) names each one, its upstream repository, and its copyright notice.
+Not everything here is mine. Nine skills come from other MIT-licensed projects. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) names each one, its upstream repository, and its copyright notice.
 
 ## License
 

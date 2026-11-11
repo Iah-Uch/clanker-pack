@@ -62,7 +62,16 @@ def check_script_references(skill_dir: Path) -> None:
                 fail(f"{doc.relative_to(ROOT)}: references scripts/{name}, which does not exist")
 
 
+def check_external(entry: dict) -> int:
+    # A plugin from another author is pinned to a full commit, so an upstream push cannot change what users install.
+    if not re.fullmatch(r"[0-9a-f]{40}", entry["source"].get("sha", "")):
+        fail(f"{entry['name']}: external source has no 40-character sha")
+    return 0
+
+
 def check_plugin(entry: dict) -> int:
+    if isinstance(entry["source"], dict):
+        return check_external(entry)
     plugin_dir = (ROOT / entry["source"]).resolve()
     if not plugin_dir.is_dir():
         fail(f"marketplace: `{entry['name']}` source {entry['source']} does not exist")
@@ -100,7 +109,7 @@ def main() -> int:
     plugins = marketplace.get("plugins", [])
     skills = sum(check_plugin(entry) for entry in plugins)
     # A mod is a plugin with hooks and no skills; the README counts skill packs only.
-    packs = sum(1 for entry in plugins if (ROOT / entry["source"] / "skills").is_dir())
+    packs = sum(1 for e in plugins if isinstance(e["source"], str) and (ROOT / e["source"] / "skills").is_dir())
     check_readme_count(skills, packs)
     for message in errors:
         print(f"FAIL {message}")
