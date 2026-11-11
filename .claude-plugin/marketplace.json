@@ -49,8 +49,8 @@
     {
       "name": "recommended-pack",
       "source": "./plugins/recommended-pack",
-      "version": "0.6.0",
-      "description": "Bundle: installs 14 well-starred plugins from other authors, such as context-mode, ai-memory, superpowers, context7 and ui-ux-pro-max"
+      "version": "0.7.0",
+      "description": "Bundle: installs 15 plugins from other authors, such as context-mode, ai-memory, superpowers, context7 and cache-tax"
     },
     {
       "name": "context-mode",
@@ -121,6 +121,16 @@
         "sha": "6ae86f61f520d6ca229d2f40e070410638c908c5"
       },
       "description": "From nextlevelbuilder: UI style, palette and font database"
+    },
+    {
+      "name": "cache-tax",
+      "source": {
+        "source": "github",
+        "repo": "karanb192/cache-tax",
+        "sha": "c4f8cf2faabed12a59a4b1d2aa56d6d8cce43958"
+      },
+      "description": "From karanb192/cache-tax: keeps the prompt cache warm and asks before a cold send",
+      "version": "2.4.1"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # recommended-pack
 
-A bundle. It has no code of its own. Installing it installs 14 plugins from other authors, through Claude Code plugin dependencies. Every one has 15k or more GitHub stars, or comes from Anthropic's own marketplace.
+A bundle. It has no code of its own. Installing it installs 15 plugins from other authors, through Claude Code plugin dependencies. Every one has 15k or more GitHub stars or comes from Anthropic's marketplace, except cache-tax.
 
 ## What it installs
 
@@ -15,6 +15,7 @@ A bundle. It has no code of its own. Installing it installs 14 plugins from othe
 | [context7](https://github.com/upstash/context7) | `claude-plugins-official` | Live, version-correct library docs through an MCP server. |
 | skill-creator | `claude-plugins-official` | Create, improve and benchmark skills. |
 | hookify | `claude-plugins-official` | Create hooks from plain markdown rules. |
+| [cache-tax](https://github.com/karanb192/cache-tax) | `cache-tax` | Keeps the one-hour prompt cache warm during breaks and asks before a cold send. Keep-warm requests cost tokens. Needs Claude Code 2.1.287 or later. |
 | [caveman](https://github.com/JuliusBrussee/caveman) | `caveman` | Terse-answer mode that cuts output tokens. |
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) | `taste-skill` | Anti-slop skill for landing pages and portfolios, with a real-browser check. Not for dashboards. |
 | [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | `karpathy-skills` | One skill with four rules that cut common LLM coding mistakes. |
@@ -43,9 +44,10 @@ If you install it next to this bundle, set `toolprune_protect` to `mcp__plugin_c
 - The marketplace lists each third-party plugin as its own entry, pinned to a full commit that was reviewed. An upstream push changes nothing for you. A new version of this bundle moves the pin.
 - Anthropic's plugins come from `claude-plugins-official`. Each one follows the latest release of that marketplace.
 - If you already installed one of these plugins from its own marketplace, such as `context-mode@context-mode`, uninstall it first. Two copies run their hooks twice.
-- Fourteen plugins add to every session's context. MCP servers cost the most: context7. Run `/context` to see what each one costs.
+- Fifteen plugins add to every session's context. MCP servers cost the most: context7. Run `/context` to see what each one costs.
 - superpowers, code-review, security-guidance and mattpocock-skills overlap in places. Disable the one you do not use.
 - ui-ux-pro-max ships an unpinned `npx -y` MCP config in `stack/.mcp.json`. Claude Code does not load it, because it is not at the plugin root. Do not copy it into a project.
 - The karpathy repository has no license file on GitHub. Its `plugin.json` says MIT.
+- cache-tax has about 400 stars, far below the rest. It is the one tool of its kind that I found, and its hooks use only the Claude Code engine API: no network, no file or process access. Its single author is a risk. Remove it if you do not want it.
 - Each plugin adds hooks to your sessions. Read what they store before you use them on a repository with sensitive data.
 - Claude Code refuses to disable a plugin that another enabled plugin still needs. To remove one, run `/plugin uninstall recommended-pack` first.
