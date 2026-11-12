@@ -83,7 +83,7 @@ When proposing fixes, prefer earlier moves over later ones:
 
 ## Required Output Format
 
-Two parts, in this order.
+Two parts, in this order. Never stop after the table: the answer always ends with Part 2, with the word "Verdict" and a Block or Approve decision. When a duration exceeds the 300ms UI budget, say so in the Why column.
 
 ### Part 1 — Findings table (REQUIRED)
 

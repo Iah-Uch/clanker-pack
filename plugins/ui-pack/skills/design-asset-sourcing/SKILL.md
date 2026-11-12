@@ -1,11 +1,15 @@
 ---
 name: design-asset-sourcing
-description: Use when a task needs illustrations, icons, SVG logos, stock photos, placeholder images or fake data, background patterns, fonts, color palettes, UI templates/component blocks, device mockups, or audio - routes to a vetted resource library, gives copy-paste fetch endpoints, and enforces license checks before anything ships.
+description: Use whenever the user asks to add or improve an illustration, icon, image, logo, font or palette in a UI, even if they name no source. Use when a task needs illustrations, icons, SVG logos, stock photos, placeholder images or fake data, background patterns, fonts, color palettes, UI templates/component blocks, device mockups, or audio - routes to a vetted resource library, gives copy-paste fetch endpoints, and enforces license checks before anything ships.
 ---
 
 # Design Asset Sourcing
 
 Find, fetch, and transform free design assets. Never hand-draw an SVG or invent a hex palette when a canonical source exists.
+
+## Reply rule
+
+Your final reply must do one of two things. Name each asset you added with its source and its license. Or state that you added no asset and why. Never add an inline hand-drawn icon or SVG as a substitute for sourcing one.
 
 ## When to invoke
 

@@ -1,11 +1,15 @@
 ---
 name: mermaid-diagrams
-description: Comprehensive guide for creating software diagrams using Mermaid syntax. Use when users need to create, visualize, or document software through diagrams including class diagrams (domain modeling, object-oriented design), sequence diagrams (application flows, API interactions, code execution), flowcharts (processes, algorithms, user journeys), entity relationship diagrams (database schemas), C4 architecture diagrams (system context, containers, components), state diagrams, git graphs, pie charts, gantt charts, or any other diagram type. Triggers include requests to "diagram", "visualize", "model", "map out", "show the flow", or when explaining system architecture, database design, code structure, or user/application flows.
+description: Use whenever the user asks for a diagram, ER diagram, flowchart or architecture drawing, in chat or in a file. Guide for software diagrams in Mermaid syntax. Use when users need to create, visualize, or document software through diagrams including class diagrams (domain modeling, object-oriented design), sequence diagrams (application flows, API interactions, code execution), flowcharts (processes, algorithms, user journeys), entity relationship diagrams (database schemas), C4 architecture diagrams (system context, containers, components), state diagrams, git graphs, pie charts, gantt charts, or any other diagram type. Triggers include requests to "diagram", "visualize", "model", "map out", "show the flow", or when explaining system architecture, database design, code structure, or user/application flows.
 ---
 
 # Mermaid Diagramming
 
 Create professional software diagrams using Mermaid's text-based syntax. Mermaid renders diagrams from simple text definitions, making diagrams version-controllable, easy to update, and maintainable alongside code.
+
+## Output rule
+
+Every diagram you write, in chat or in a file, must contain at least one `%%` comment line. Start with one that says what the diagram shows.
 
 ## Core Syntax Structure
 
@@ -148,7 +152,7 @@ For in-depth guidance on specific diagram types, see:
 
 1. **Start Simple** - Begin with core entities/components, add details incrementally
 2. **Use Meaningful Names** - Clear labels make diagrams self-documenting
-3. **Comment Extensively** - Use `%%` comments to explain complex relationships
+3. **Comment Extensively** - Use `%%` comments to explain complex relationships. Every diagram you write must contain at least one `%%` comment line. Start with one that names what the diagram shows, then add one per group of relationships
 4. **Keep Focused** - One diagram per concept; split large diagrams into multiple focused views
 5. **Version Control** - Store `.mmd` files alongside code for easy updates
 6. **Add Context** - Include titles and notes to explain diagram purpose
