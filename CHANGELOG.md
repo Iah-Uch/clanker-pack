@@ -8,7 +8,6 @@
 - Eval cases for `safety-pack`, `stack-pack`, `ui-pack` and `tools-pack`, run with `claude plugin eval`.
 - `scripts/cost.py`, which measures the skill-listing text each plugin adds to a session.
 - Quick-start section and a cost table in the README.
-- `benchmarks/`: runs an agent in seeded project folders with the skill absent, installed and named, and reports the 19 skills whose named-skill runs all passed. It also has a hook benchmark.
 
 ### Changed
 - `ui-pack` 1.4.0: `tailwind-patterns` loads on matching files only. `improve-animations` is manual only (`/improve-animations`).

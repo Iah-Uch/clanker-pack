@@ -1,7 +1,0 @@
-For a commercial product, start with the H3 hexagonal grid. It assigns coordinates to hierarchical hexagonal cells and supports binning, aggregation, density maps, and joins by cell ID. It’s Apache-2.0, a permissive license suitable for commercial use. H3 cells vary in shape and area, especially near pentagons, so account for that in area-based statistics.
-
-For planar data, consider Uber’s h3-js or the H3 core libraries. For pointy-hex grids in Python, the MIT-licensed `honeycomb`/`hexbin` ecosystem may fit, but check each project’s current license and maintenance status before adopting.
-
-For smoothing, aggregate to hex cells first, then use a neighborhood kernel or graph-based method over adjacent cells. H3’s neighbor relationships help, but hexagons alone don’t guarantee statistically sound smoothing; choose weights based on your data and whether distances are geographic or planar.
-
-If you need exact equal-area cells or rigorous spatial joins, use an equal-area projection and a spatial database or geometry library alongside the grid. Keep dependencies and license notices in your product’s license inventory; verify the exact package license and its transitive dependencies before release.

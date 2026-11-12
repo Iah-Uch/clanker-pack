@@ -1,5 +1,0 @@
-For a commercial product, start with the Web Animations API (WAAPI), built into browsers and requiring no library or framework. It supports keyframes, delays, playback control, and looping. You can sequence effects with promises or a small scheduler; that keeps licensing simple because the API itself isn’t third-party software.
-
-If you want a library, GSAP is a strong fit for staggered timelines and looping sequences. Its standard license permits commercial use, subject to its current terms; check whether any paid plugins you need have separate terms. Anime.js is another lightweight option, available under the MIT License, which permits commercial use with notice and license text preserved.
-
-Choose based on the complexity you need: WAAPI for a small dependency-free solution, GSAP for rich timeline controls, or Anime.js for a compact MIT-licensed helper. This is general guidance, not a current license verification.

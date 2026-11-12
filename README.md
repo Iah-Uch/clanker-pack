@@ -132,8 +132,6 @@ claude plugin eval plugins/safety-pack --runs 3
 
 This costs tokens: about $0.05 to $0.25 per run. `generative-pack` and `turn-discipline` have no trigger cases yet. The hooks have unit tests instead, in `plugins/safety-pack/hooks/test_hooks.py`.
 
-A second test runs an agent in a seeded project folder with and without the skill, and grades what the agent did. [benchmarks/results/skills/REPORT.md](benchmarks/results/skills/REPORT.md) lists 19 skills whose named-skill runs all passed. Skills that did not pass every run are left out of that report. Runs per cell are 1 to 3, so treat it as a first signal. Details and limits: [benchmarks/README.md](benchmarks/README.md).
-
 ## Design heuristics
 
 The packs share a point of view:

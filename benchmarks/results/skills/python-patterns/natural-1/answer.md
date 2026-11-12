@@ -1,1 +1,0 @@
-What kind of Python web app are you building? Pick a simple website (Flask), a full-stack app (Django), or a JSON API (FastAPI). Include a framework preference if you have one.

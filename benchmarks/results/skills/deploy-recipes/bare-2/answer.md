@@ -1,3 +1,0 @@
-I made the repo deployable as a minimal Next.js app and added Vercel setup guidance. The Stripe key is now read from the server-only `STRIPE_SECRET_KEY`; the existing `.env.local` uses `NEXT_PUBLIC_STRIPE_SECRET_KEY`, so rename that variable locally and set `STRIPE_SECRET_KEY` in Vercel. Keep `.env.local` out of Git.
-
-I also added a root layout and page, build scripts, TypeScript configuration, and a credential-free `.env.example`. **The app is still a placeholder**, and I did not run a build. Configure `STRIPE_SECRET_KEY` and `DATABASE_URL` in Vercel’s Production environment before deploying.

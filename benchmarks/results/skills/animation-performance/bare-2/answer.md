@@ -1,1 +1,0 @@
-Updated [sidebar.css](/tmp/bench2-2o_77311/repo/src/sidebar.css) to animate the sidebar with `transform` instead of `left`, which avoids triggering layout during the slide. It now fits narrow screens and respects reduced-motion preferences.

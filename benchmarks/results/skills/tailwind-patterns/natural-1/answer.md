@@ -1,1 +1,0 @@
-Added brand tokens in [src/index.css](/tmp/bench2-6pg4g_sg/repo/src/index.css): primary `#4f46e5`, Inter as the display font, and a 4px-based spacing scale from `0` to `24` (6rem). The values are available as CSS variables and Tailwind v4 theme tokens.

@@ -1,1 +1,0 @@
-Renamed `users.email` to `users.contact_email` in `app.db` and updated the query and initial migration. All three user rows were preserved. A backup is at [app.db.pre_contact_email.bak](/tmp/bench2-8qmd2mpf/repo/app.db.pre_contact_email.bak).

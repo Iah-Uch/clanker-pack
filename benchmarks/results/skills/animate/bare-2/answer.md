@@ -1,1 +1,0 @@
-Added a subtle fade and upward scale animation when the palette opens, with reduced-motion support. The component stays mounted while closed so the transition can run; `aria-hidden` and `inert` keep it out of interaction and accessibility until opened.

@@ -1,1 +1,0 @@
-The `animate` skill identifies Cmd+K as a frequent keyboard action and says it should open instantly, without animation. I’m following that guidance, so I haven’t changed the palette.

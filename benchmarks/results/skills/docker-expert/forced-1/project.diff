@@ -1,9 +1,0 @@
-?? .dockerignore
-?? Dockerfile
-?? compose.yaml
-
-BRANCHES
-* main
-TAGS
-STASH
-

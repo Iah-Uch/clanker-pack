@@ -1,1 +1,0 @@
-What are you building: an API, a full web app with pages, or a small learning project? And do you have a Python framework preference, such as FastAPI, Django, or Flask?

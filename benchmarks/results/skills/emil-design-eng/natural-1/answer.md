@@ -1,1 +1,0 @@
-Polished the button states in [button.css](/tmp/bench2-bcfp4y_h/repo/src/button.css): hover now lifts slightly with a darker fill and stronger shadow; press gives a quick downward response. Added a visible keyboard focus ring and reduced-motion support. I didn’t run tests.

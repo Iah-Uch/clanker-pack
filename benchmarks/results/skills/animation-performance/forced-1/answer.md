@@ -1,3 +1,0 @@
-Changed the sidebar animation in [sidebar.css](/tmp/bench2-141cc1qc/repo/src/sidebar.css:1) to move with `transform: translateX()` instead of animating `left`, and replaced `transition: all` with an explicit transform transition. This avoids per-frame layout work that can make the animation janky on phones.
-
-The cause and fix are verified from the code. Confirm the result with a performance recording on a mid-range phone; I haven’t profiled it on a device.

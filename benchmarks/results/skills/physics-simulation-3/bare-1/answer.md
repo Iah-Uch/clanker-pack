@@ -1,7 +1,0 @@
-Use published algorithms as your foundation: Newtonian N-body integration (leapfrog or higher-order symplectic methods for long-term orbits), adaptive integrators for close encounters, and conservation checks for energy and angular momentum. For system formation, look at core accretion, migration, and planetesimal growth models; for generative astronomy, use procedural population models calibrated against observed systems.
-
-Useful projects to study include REBOUND (N-body dynamics), Mercury (orbital integrations), and Astropy (astronomy utilities). Treat them as references, not automatically reusable code: check each project’s current license and dependencies before incorporating anything.
-
-For a commercial product, permissive licenses such as MIT, BSD, or Apache-2.0 generally allow commercial use with notice and attribution obligations. GPL and AGPL are copyleft and can impose source-sharing requirements when distributing software or offering network access; avoid them if that conflicts with your goals. License obligations depend on how you use and distribute the code, and dependencies may have different terms.
-
-Reimplementing an algorithm from literature is usually distinct from copying its code, but avoid copying expressive code, tests, or documentation. Track sources and derivations, and get legal review before shipping.

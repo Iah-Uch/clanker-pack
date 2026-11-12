@@ -1,1 +1,0 @@
-Added a 180 ms opening animation to the command palette: it fades in while moving down slightly and scaling into place. Reduced-motion settings disable the animation.

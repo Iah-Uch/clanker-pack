@@ -1,7 +1,0 @@
-Use slow-scan television (SSTV) as your first technique. It maps each image row’s brightness to audio frequency, with sync tones between lines; color modes send channels in sequence. It’s easy to explain, recognizable over radio, and produces a decodable image. PySSTV is a readable Python example under the MIT license, a permissive choice for a commercial product. Keep its copyright and license notices if you reuse code.
-
-For a more visual, experimental lesson, try scanline sonification: convert pixel values to pitch or amplitude and play rows in sequence. That’s simple to implement yourself and avoids inheriting a project’s code license; the algorithmic idea itself isn’t owned by a software license.
-
-For reliability over noisy channels, add framing, error detection, and possibly correction around the image data; SSTV is mainly an analog-style transmission format, not robust digital transport. Decide whether your product needs interoperability with radio SSTV decoders or a custom artistic sound.
-
-The skill’s project and license details were checked in its local reference; I honored your no-search request. For a commercial release, verify the repository’s current license and include required notices.
