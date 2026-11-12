@@ -1,0 +1,18 @@
+{
+ "id": "ship-checklist",
+ "arm": "natural",
+ "run": 2,
+ "fired": true,
+ "tokens": 77931,
+ "seconds": 21.4,
+ "rc": 0,
+ "checks": {
+  "found_secret": true,
+  "found_auth": true,
+  "found_no_tests": true,
+  "false_all_clear": false,
+  "score": 3,
+  "pass": true
+ },
+ "passed": true
+}

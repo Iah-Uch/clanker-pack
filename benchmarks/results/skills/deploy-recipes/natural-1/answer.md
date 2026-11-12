@@ -1,0 +1,5 @@
+The repo is **not fully verified for production yet**. I added the Next.js App Router entrypoint and build scripts, and changed the Stripe key lookup to use the server-only `STRIPE_SECRET_KEY`. I also added `.env.example` and [DEPLOYMENT.md](/tmp/bench2-snwen0l1/repo/DEPLOYMENT.md) with Vercel setup and rollback instructions.
+
+The existing `.env.local` uses `NEXT_PUBLIC_STRIPE_SECRET_KEY`. In Vercel, add its value as `STRIPE_SECRET_KEY` instead, plus `DATABASE_URL`; use production credentials for the Production environment and keep Preview credentials separate. I did not copy or expose either value.
+
+`git diff --check` passes. I couldn’t run a production build: dependencies aren’t installed, and package-lock generation did not complete. There’s also no lockfile yet. Vercel should detect Next.js and use the `build` script automatically, but build readiness still needs confirmation. [Vercel build settings](https://vercel.com/docs/builds/configure-a-build)

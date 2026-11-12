@@ -1,0 +1,22 @@
+ M src/sidebar.css
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/src/sidebar.css b/src/sidebar.css
+index 851dd76..3da6986 100644
+--- a/src/sidebar.css
++++ b/src/sidebar.css
+@@ -1,2 +1,8 @@
+-.sidebar { position: fixed; left: -320px; width: 320px; transition: all 300ms; }
+-.sidebar.open { left: 0; }
++.sidebar {
++  position: fixed;
++  left: 0;
++  width: 320px;
++  transform: translateX(-100%);
++  transition: transform 300ms ease;
++}
++.sidebar.open { transform: translateX(0); }

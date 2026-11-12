@@ -1,0 +1,17 @@
+{
+ "id": "emil-design-eng",
+ "arm": "forced",
+ "run": 2,
+ "fired": true,
+ "tokens": 87557,
+ "seconds": 20.8,
+ "rc": 0,
+ "checks": {
+  "no_ease_in": true,
+  "no_scale0": true,
+  "has_active": true,
+  "no_transition_all": true,
+  "pass": true
+ },
+ "passed": true
+}

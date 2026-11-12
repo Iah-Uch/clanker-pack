@@ -50,8 +50,16 @@ def check_frontmatter(skill_dir: Path) -> None:
         if not isinstance(meta.get(key), str) or not meta[key].strip():
             fail(f"{label}: missing or empty `{key}`")
     description = meta.get("description")
-    if isinstance(description, str) and len(description) > MAX_DESCRIPTION_CHARS:
-        fail(f"{label}: description is {len(description)} chars, limit {MAX_DESCRIPTION_CHARS}")
+    when_to_use = meta.get("when_to_use")
+    listed = (description if isinstance(description, str) else "") + (when_to_use if isinstance(when_to_use, str) else "")
+    # Claude Code caps the description and when_to_use text together.
+    if len(listed) > MAX_DESCRIPTION_CHARS:
+        fail(f"{label}: description and when_to_use are {len(listed)} chars, limit {MAX_DESCRIPTION_CHARS}")
+    paths = meta.get("paths")
+    if paths is not None and not (
+        isinstance(paths, str) or (isinstance(paths, list) and all(isinstance(p, str) for p in paths))
+    ):
+        fail(f"{label}: `paths` must be a string or a list of strings")
 
 
 def check_script_references(skill_dir: Path) -> None:

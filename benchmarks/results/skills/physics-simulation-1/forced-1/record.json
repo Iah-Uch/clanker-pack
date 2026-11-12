@@ -1,0 +1,16 @@
+{
+ "id": "physics-simulation-1",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 50343,
+ "seconds": 12.7,
+ "rc": 0,
+ "checks": {
+  "names_target": true,
+  "names_same_topic": true,
+  "names_any_catalog": true,
+  "pass": true
+ },
+ "passed": true
+}

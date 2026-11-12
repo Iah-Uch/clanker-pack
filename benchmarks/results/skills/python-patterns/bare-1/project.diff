@@ -1,0 +1,38 @@
+ M README.md
+?? .gitignore
+?? app.py
+?? requirements.txt
+?? templates/
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/README.md b/README.md
+index ada39d0..04c5f38 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,21 @@
+-New project.
++# Python Web Starter
++
++A small Flask app you can use as a starting point for a Python web project.
++
++## Run locally
++
++```bash
++python -m venv .venv
++source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
++python -m pip install -r requirements.txt
++flask --app app run --debug
++```
++
++Open <http://127.0.0.1:5000> in your browser. The app also exposes `GET /health` for a simple health check.
++
++## Project structure
++
++- `app.py` — Flask application and routes
++- `templates/index.html` — landing page
++- `requirements.txt` — Python dependencies
++- `.gitignore` — local Python and editor artifacts

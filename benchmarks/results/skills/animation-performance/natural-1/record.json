@@ -1,0 +1,16 @@
+{
+ "id": "animation-performance",
+ "arm": "natural",
+ "run": 1,
+ "fired": false,
+ "tokens": 69530,
+ "seconds": 15.7,
+ "rc": 0,
+ "checks": {
+  "no_transition_all": true,
+  "no_layout_props": true,
+  "uses_transform": true,
+  "pass": true
+ },
+ "passed": true
+}

@@ -1,0 +1,18 @@
+{
+ "id": "tailwind-patterns",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 104093,
+ "seconds": 19.4,
+ "rc": 0,
+ "checks": {
+  "uses_theme": true,
+  "imports_tailwind": true,
+  "no_config_js": true,
+  "no_v3_directives": true,
+  "has_brand": true,
+  "pass": true
+ },
+ "passed": true
+}

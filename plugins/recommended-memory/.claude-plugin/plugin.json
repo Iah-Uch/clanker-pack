@@ -1,0 +1,12 @@
+{
+  "name": "recommended-memory",
+  "description": "Installs ai-memory, long-term memory across sessions. Needs the ai-memory binary on your machine.",
+  "version": "0.1.0",
+  "dependencies": [
+    "ai-memory"
+  ],
+  "author": {
+    "name": "Iah-Uch"
+  },
+  "license": "MIT"
+}

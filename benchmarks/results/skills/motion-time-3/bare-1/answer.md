@@ -1,0 +1,7 @@
+For a commercial product, use unit quaternions with spherical interpolation (SLERP) for orientation between keyframes. For a camera path that must feel smooth across multiple keys, use a squad curve or a quaternion spline with tangent control; SLERP alone is smooth between two keys but can change angular velocity at each key.
+
+If you need a ready-made library, Eigen provides quaternion SLERP under MPL-2.0, a file-level copyleft license that is generally compatible with commercial products if you meet its notice and source-disclosure requirements for modified files. GLM provides quaternion interpolation under the permissive Happy Bunny License, which allows commercial use; retain its copyright and license notices. Check the exact version and bundled dependencies before shipping.
+
+For higher-level path authoring, evaluate Blender’s camera path tooling, but its GPL license makes it a poor fit to embed in a closed-source product. You can still use Blender separately to create assets, subject to its terms.
+
+My default: implement SLERP/squad using GLM if you want a lightweight permissive dependency, or implement the small interpolation routine yourself after reviewing an established reference.

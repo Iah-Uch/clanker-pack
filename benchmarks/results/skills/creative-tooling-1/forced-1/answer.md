@@ -1,0 +1,5 @@
+For teaching, quick visual prototypes, and a large example ecosystem, start with **p5.js**. Its Processing-style `setup()`/`draw()` loop and simple drawing vocabulary make it easy to teach. It uses **LGPL-2.1**: linking it into a commercial product is generally allowed; if you modify the library, you must share those modifications under LGPL terms.
+
+If you want a more permissive license, consider **canvas-sketch (MIT)** for print-oriented sketches and export, or **Three.js (MIT)** for browser 3D and a broad example ecosystem. **PixiJS (MIT)** fits interactive 2D with many objects; **Babylon.js (Apache-2.0)** is a fuller engine with editor and tooling.
+
+Recommendation: prototype with p5.js, then use Three.js or PixiJS if your product needs a production rendering engine. Preserve required license and copyright notices, and review the exact versions and dependencies you ship.

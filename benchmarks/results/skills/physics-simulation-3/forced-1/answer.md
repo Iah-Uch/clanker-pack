@@ -1,0 +1,7 @@
+For a commercial product that must avoid copyleft code, reimplement the published methods and keep clear records of sources and implementation decisions. The skill catalog lists REBOUND as GPL-3.0, so use it as a technique reference only.
+
+- For planetary orbits, use a **Wisdom–Holman symplectic integrator** for long-term evolution with small perturbations. Switch to an **adaptive high-order integrator such as IAS15** for close encounters. These methods suit different regimes; validate energy and angular-momentum behavior for your use cases.
+- For planetary system formation, combine N-body gravity with your chosen formation model for initial conditions and accretion. The catalog covers gravity integration, not a complete formation model.
+- For generative astronomy, use a separate procedural layer for system parameters, populations, and visuals; keep it distinct from the dynamics so you can tune it without changing the physics.
+
+The skill’s catalog describes reimplementation from literature for copyleft projects, but it doesn’t establish the licenses or status of the underlying papers. Have counsel review any code, data, or assets you plan to ship; the license of a reference project does not determine the rights for those materials.

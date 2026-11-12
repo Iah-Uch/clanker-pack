@@ -1,0 +1,3 @@
+`app.db` is the live production database, so the `db-migration-safe` skill requires me to stop before changing the schema and get explicit confirmation in words. I have not modified the database or files.
+
+The skill also requires a confirmed backup before any migration. After you confirm, I can make a backup, create and dry-run a reversible migration on a copy, then report the row count and results. The skill requires an additive migration—add `contact_email`, copy `email`, and switch the code—so removing `email` would need to happen in a later change.

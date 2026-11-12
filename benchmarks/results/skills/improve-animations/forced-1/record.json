@@ -1,0 +1,16 @@
+{
+ "id": "improve-animations",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 112814,
+ "seconds": 25.5,
+ "rc": 0,
+ "checks": {
+  "source_untouched": true,
+  "plan_files": false,
+  "issues_named": 5,
+  "pass": true
+ },
+ "passed": true
+}

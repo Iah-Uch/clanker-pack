@@ -1,0 +1,16 @@
+{
+ "id": "physics-simulation-3",
+ "arm": "bare",
+ "run": 1,
+ "fired": false,
+ "tokens": 13338,
+ "seconds": 9.8,
+ "rc": 0,
+ "checks": {
+  "names_target": true,
+  "names_same_topic": true,
+  "names_any_catalog": true,
+  "pass": true
+ },
+ "passed": true
+}

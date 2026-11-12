@@ -1,0 +1,17 @@
+{
+ "id": "rollback-plan",
+ "arm": "natural",
+ "run": 2,
+ "fired": true,
+ "tokens": 55883,
+ "seconds": 16.2,
+ "rc": 0,
+ "checks": {
+  "cites_current_version": false,
+  "cites_lockfile": true,
+  "has_git_checkpoint": true,
+  "flags_irreversible": false,
+  "pass": true
+ },
+ "passed": true
+}

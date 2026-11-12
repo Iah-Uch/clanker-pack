@@ -1,0 +1,1 @@
+Added the brand tokens in [src/index.css](/tmp/bench2-g69m9ciw/repo/src/index.css): primary `#4f46e5`, Inter as the display and body font, and a 4px-based spacing scale from 4px to 64px. Tailwind can use them as `bg-primary`, `font-display`, and spacing utilities.

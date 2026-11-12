@@ -1,0 +1,1 @@
+Added Tailwind v4 theme tokens in [index.css](/tmp/bench2-7o3fez0_/repo/src/index.css): primary `#4f46e5`, an Inter display font stack, and a spacing scale from `0` through `24` (up to `6rem`). Also added Tailwind’s CSS import.

@@ -1,0 +1,1 @@
+Added the design tokens in [src/index.css](/tmp/bench2-ijyt262b/repo/src/index.css): primary `#4f46e5`, Inter as the display and default font, and a spacing scale from `0.25rem` to `6rem`. Imported Tailwind CSS so its theme tokens are available.

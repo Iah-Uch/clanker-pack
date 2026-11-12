@@ -1,0 +1,19 @@
+{
+ "id": "docker-expert",
+ "arm": "natural",
+ "run": 1,
+ "fired": false,
+ "tokens": 122280,
+ "seconds": 69.3,
+ "rc": 0,
+ "checks": {
+  "has_dockerfile": true,
+  "has_dockerignore": true,
+  "non_root": false,
+  "multi_stage": false,
+  "prod_deps": true,
+  "healthcheck": true,
+  "pass": false
+ },
+ "passed": false
+}

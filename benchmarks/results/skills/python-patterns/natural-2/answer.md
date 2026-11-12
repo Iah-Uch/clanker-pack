@@ -1,0 +1,1 @@
+Before I create files, what should the web app do, and do you have a framework preference? For example, I can set up a Flask page, a Django app, or a FastAPI service.

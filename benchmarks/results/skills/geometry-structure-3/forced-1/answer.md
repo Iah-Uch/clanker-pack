@@ -1,0 +1,5 @@
+For 270,000 → 2,700 faces, start with quadric-error edge-collapse simplification. It ranks collapses by how much they disturb nearby face planes, then stops at your target count. Preserve boundaries and important features where possible, and check UVs, normals, and silhouette quality in the result.
+
+For a commercial product, try **meshoptimizer** first: it provides quadric-based simplification and is MIT-licensed. **fogleman/simplify** is another MIT-licensed reference implementation, though its README’s exact 270,000-to-2,700 example matches your case. Keep the required license notices when using either project.
+
+If you need continuous runtime LOD transitions, consider progressive meshes or a hierarchy of collapses; for offline asset pipelines, generate discrete LODs at chosen ratios. Avoid copying code from GPL/AGPL projects if you need to keep proprietary distribution simple; licenses can vary by module and dependency, so review the specific files and bundled components you ship.

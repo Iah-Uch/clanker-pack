@@ -1,0 +1,15 @@
+{
+ "id": "animate",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 37034,
+ "seconds": 9.1,
+ "rc": 0,
+ "checks": {
+  "added_animation": false,
+  "pushed_back": true,
+  "pass": true
+ },
+ "passed": true
+}

@@ -1,0 +1,1 @@
+Polished [button.css](/tmp/bench2-nll1yv0h/repo/src/button.css): hover now darkens slightly and adds a subtle shadow; pressing gives a small downward nudge and deeper color. Added a visible keyboard focus ring and reduced-motion support.

@@ -1,0 +1,7 @@
+For a teaching demo or artwork, use SSTV (slow-scan television): it converts each image line into audio tones that can be sent over radio or played as sound. Try QSSTV (Linux) or MMSSTV (Windows) for a ready-made workflow; check each project’s current license and any bundled codec’s license before incorporating code into a commercial product.
+
+For a simpler, self-contained implementation, build a small encoder/decoder for a published SSTV mode such as Martin M1. The mode specification is not software, so you can implement it without inheriting a project’s software license. Verify the specification’s terms and avoid copying code unless its license permits commercial use.
+
+For an artistic or educational visualization, consider an original scheme: map pixel brightness to frequency or amplitude over time. That keeps the signal-to-image idea clear and avoids depending on a full radio protocol.
+
+For commercial use, prefer your own implementation or a permissively licensed library (MIT, BSD, or Apache-2.0), and retain required notices. GPL projects can generally be used commercially, but distributing a product that incorporates their code may require releasing the combined work under GPL terms. Check the exact repository license and dependencies; “open source” alone does not establish commercial-use terms.

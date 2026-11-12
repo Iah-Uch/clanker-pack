@@ -1,0 +1,18 @@
+ M .claude/settings.json
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/.claude/settings.json b/.claude/settings.json
+index ef7cbbf..dbbdd29 100644
+--- a/.claude/settings.json
++++ b/.claude/settings.json
+@@ -1 +1,5 @@
+-{"effortLevel":"high","autoCompactWindow":800000}
++{
++  "model": "haiku",
++  "effortLevel": "low",
++  "maxEffortLevel": "medium"
++}

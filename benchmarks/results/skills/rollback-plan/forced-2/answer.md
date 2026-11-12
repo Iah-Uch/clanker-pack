@@ -1,0 +1,8 @@
+The change is upgrading React and React DOM from 18.2.0 to 19, which affects dependencies and possibly app code. The working tree is clean on `main` at commit `53f9128`, and `package-lock.json` is tracked, so there’s a known-good starting point.
+
+1. **Before upgrading tomorrow:** create a separate branch, such as `upgrade/react-19`, and keep the current `main` commit unchanged. Record the current commit hash (`53f9128`). Make sure the upgrade is its own change.
+2. **If the upgrade breaks things before merging:** switch back to `main` and reinstall from its lockfile with `npm ci`. This restores the committed React 18 dependencies. Keep any useful work on the upgrade branch.
+3. **If it breaks after merging:** revert the upgrade commit with `git revert <upgrade-commit>`, then reinstall from the reverted lockfile with `npm ci`. If it was deployed, redeploy the previous known-good build as well.
+4. **Point of no return:** deploying React 19 can affect users, but the code rollback still works if the previous build remains available. If the upgrade includes data or backend changes, those need their own rollback plan; none are indicated in this repo snapshot.
+
+The rollback path is checkable: `main` is at `53f9128`, the working tree is clean, and `package-lock.json` is tracked. Before starting, verify that the deployment platform retains the previous build so you can restore it if needed.
