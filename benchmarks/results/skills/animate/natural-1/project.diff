@@ -1,0 +1,89 @@
+ M src/CommandPalette.jsx
+ M src/palette.css
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/src/CommandPalette.jsx b/src/CommandPalette.jsx
+index e94c5f6..d05b0ed 100644
+--- a/src/CommandPalette.jsx
++++ b/src/CommandPalette.jsx
+@@ -1 +1,33 @@
+-export const CommandPalette = ({open}) => open ? <div className='palette'>...</div> : null;
++import { useEffect, useState } from 'react';
++import './palette.css';
++
++export const CommandPalette = ({ open }) => {
++  const [rendered, setRendered] = useState(open);
++  const [visible, setVisible] = useState(false);
++
++  useEffect(() => {
++    let frame;
++    let timeout;
++
++    if (open) {
++      setRendered(true);
++      frame = requestAnimationFrame(() => setVisible(true));
++    } else {
++      setVisible(false);
++      timeout = setTimeout(() => setRendered(false), 180);
++    }
++
++    return () => {
++      cancelAnimationFrame(frame);
++      clearTimeout(timeout);
++    };
++  }, [open]);
++
++  if (!rendered) return null;
++
++  return (
++    <div className={`palette-backdrop${visible ? ' is-visible' : ''}`}>
++      <div className="palette">...</div>
++    </div>
++  );
++};
+diff --git a/src/palette.css b/src/palette.css
+index b75796d..486cdce 100644
+--- a/src/palette.css
++++ b/src/palette.css
+@@ -1 +1,36 @@
+-.palette { position: fixed; top: 20%; }
++.palette-backdrop {
++  position: fixed;
++  inset: 0;
++  z-index: 1000;
++  display: flex;
++  justify-content: center;
++  align-items: flex-start;
++  padding: 20vh 1rem 1rem;
++  background: rgb(0 0 0 / 0%);
++  opacity: 0;
++  transition: opacity 180ms ease-out, background-color 180ms ease-out;
++}
++
++.palette-backdrop.is-visible {
++  opacity: 1;
++  background: rgb(0 0 0 / 35%);
++}
++
++.palette {
++  width: min(100%, 36rem);
++  transform: translateY(-8px) scale(.98);
++  opacity: 0;
++  transition: transform 220ms cubic-bezier(.2, .8, .2, 1), opacity 160ms ease-out;
++}
++
++.is-visible .palette {
++  transform: translateY(0) scale(1);
++  opacity: 1;
++}
++
++@media (prefers-reduced-motion: reduce) {
++  .palette-backdrop,
++  .palette {
++    transition-duration: 0.01ms;
++  }
++}

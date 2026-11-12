@@ -1,0 +1,1 @@
+The animate skill says command palettes opened by keyboard shortcuts should remain instant because they’re used frequently. Since Cmd+K is the primary way to open this palette, I’m not adding an opening animation.

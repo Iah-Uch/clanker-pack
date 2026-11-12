@@ -1,0 +1,12 @@
+ M src/users.py
+?? migrations/002_rename_email_to_contact_email.down.sql
+?? migrations/002_rename_email_to_contact_email.sql
+
+diff --git a/src/users.py b/src/users.py
+index fb53ded..2b9ced2 100644
+--- a/src/users.py
++++ b/src/users.py
+@@ -1,2 +1,2 @@
+ def find(db, id):
+-    return db.execute('SELECT email, name FROM users WHERE id=?', (id,)).fetchone()
++    return db.execute('SELECT contact_email, name FROM users WHERE id=?', (id,)).fetchone()

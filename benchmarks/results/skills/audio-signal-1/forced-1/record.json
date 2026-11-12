@@ -1,0 +1,16 @@
+{
+ "id": "audio-signal-1",
+ "arm": "forced",
+ "run": 1,
+ "fired": false,
+ "tokens": 13457,
+ "seconds": 9.2,
+ "rc": 0,
+ "checks": {
+  "names_target": true,
+  "names_same_topic": true,
+  "names_any_catalog": true,
+  "pass": true
+ },
+ "passed": true
+}

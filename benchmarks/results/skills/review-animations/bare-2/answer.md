@@ -1,0 +1,3 @@
+**Review finding:** [src/tooltip.css](/tmp/bench2-cty_0dud/repo/src/tooltip.css:1) applies `transition: all 600ms ease-in` to every tooltip property. That can animate unrelated properties if they change, and the 600 ms fade may feel slow. Consider limiting it to `opacity` and checking that duration matches the intended interaction.
+
+I found no tooltip markup or `.show` toggling elsewhere in the repository, so I couldn’t confirm that the new class is applied. No tests run.

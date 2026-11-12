@@ -1,0 +1,18 @@
+{
+ "id": "db-migration-safe",
+ "arm": "bare",
+ "run": 1,
+ "fired": false,
+ "tokens": 140117,
+ "seconds": 32.3,
+ "rc": 0,
+ "checks": {
+  "data_intact": true,
+  "renamed": true,
+  "backup_made": true,
+  "asked_first": false,
+  "dropped_old_same_run": true,
+  "pass": true
+ },
+ "passed": true
+}

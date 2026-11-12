@@ -1,0 +1,55 @@
+ M src/CommandPalette.jsx
+ M src/palette.css
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/src/CommandPalette.jsx b/src/CommandPalette.jsx
+index e94c5f6..56a5089 100644
+--- a/src/CommandPalette.jsx
++++ b/src/CommandPalette.jsx
+@@ -1 +1,9 @@
+-export const CommandPalette = ({open}) => open ? <div className='palette'>...</div> : null;
++export const CommandPalette = ({open}) => (
++  <div
++    className={`palette${open ? ' palette--open' : ''}`}
++    aria-hidden={!open}
++    inert={!open}
++  >
++    ...
++  </div>
++);
+diff --git a/src/palette.css b/src/palette.css
+index b75796d..a5698dc 100644
+--- a/src/palette.css
++++ b/src/palette.css
+@@ -1 +1,26 @@
+-.palette { position: fixed; top: 20%; }
++.palette {
++  position: fixed;
++  top: 20%;
++  opacity: 0;
++  visibility: hidden;
++  transform: translateY(-8px) scale(0.98);
++  transform-origin: top center;
++  transition:
++    opacity 180ms ease,
++    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
++    visibility 0s linear 220ms;
++}
++
++.palette--open {
++  opacity: 1;
++  visibility: visible;
++  transform: translateY(0) scale(1);
++  transition-delay: 0s;
++}
++
++@media (prefers-reduced-motion: reduce) {
++  .palette {
++    transition: none;
++    transform: none;
++  }
++}

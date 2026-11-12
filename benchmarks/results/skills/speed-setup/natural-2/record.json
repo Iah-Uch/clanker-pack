@@ -1,0 +1,16 @@
+{
+ "id": "speed-setup",
+ "arm": "natural",
+ "run": 2,
+ "fired": true,
+ "tokens": 34972,
+ "seconds": 11.3,
+ "rc": 0,
+ "checks": {
+  "recommends_low_and_200k": true,
+  "changed_file": false,
+  "asked_first": false,
+  "pass": true
+ },
+ "passed": true
+}

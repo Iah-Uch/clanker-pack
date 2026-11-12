@@ -1,0 +1,1 @@
+Updated [sidebar.css](/tmp/bench2-kf1sm0rh/repo/src/sidebar.css) to animate the sidebar with `transform`, which avoids animating `left` and triggering layout work on every frame. The transition now targets only `transform`, and respects reduced-motion preferences.

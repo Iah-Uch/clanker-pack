@@ -1,0 +1,16 @@
+{
+ "id": "motion-time-3",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 50030,
+ "seconds": 12.1,
+ "rc": 0,
+ "checks": {
+  "names_target": true,
+  "names_same_topic": true,
+  "names_any_catalog": true,
+  "pass": true
+ },
+ "passed": true
+}

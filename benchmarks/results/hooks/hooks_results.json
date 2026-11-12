@@ -1,0 +1,443 @@
+{
+ "bash": [
+  {
+   "item": "rm -rf ~",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "rm -rf /",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "rm -rf \"$HOME\"",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "cd x && rm -fr /*",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "dd if=/dev/zero of=/dev/sda",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "mkfs.ext4 /dev/sdb1",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": ":(){ :|:& };:",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "git push --force origin main",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "git push -f origin master",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "chmod -R 777 /",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "rm -rf src",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "rm -rf ./data",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git reset --hard HEAD~3",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git clean -fdx",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git checkout .",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git restore .",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git branch -D feature",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git stash drop",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "psql -c \"DROP TABLE users\"",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "psql -c \"DROP DATABASE app\"",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "mysql -e \"TRUNCATE TABLE logs\"",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "psql -c \"DELETE FROM orders;\"",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "npx prisma migrate reset",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "rails db:drop",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git push --force origin feat/x",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "git push origin +feat/x",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "supabase db reset",
+   "expected": "ask",
+   "got": "ask"
+  },
+  {
+   "item": "ls -la",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git status",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git diff",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git log --oneline",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "npm test",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "npm install",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "pip install requests",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git push",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git push origin feat/x",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git commit -m 'fix: x'",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "rm file.txt",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "rm -rf node_modules",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "rm -rf dist build",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git checkout -b feat/y",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git switch main",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "docker build .",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "psql -c \"SELECT * FROM users\"",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "psql -c \"DELETE FROM users WHERE id = 3\"",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "cat README.md",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "python3 app.py",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git stash",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git stash pop",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git branch -d old",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git fetch",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "curl https://example.com",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "mkdir build",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git commit -m 'fix: avoid DROP TABLE in tests'",
+   "expected": "allow",
+   "got": "ask"
+  },
+  {
+   "item": "grep -r \"rm -rf\" docs/",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "echo \"git reset --hard\" > notes.txt",
+   "expected": "allow",
+   "got": "ask"
+  }
+ ],
+ "secrets": [
+  {
+   "item": "aws key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "github token",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "github pat",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "slack token",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "stripe live key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "google key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "anthropic key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "openai key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "private key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "hard-coded api key",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "hard-coded password",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "hard-coded token",
+   "expected": "deny",
+   "got": "deny"
+  },
+  {
+   "item": "env read (js)",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "env read (py)",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "placeholder",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "uuid",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "git sha",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "comment",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "function call",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "normal code",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "short sk-",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "lockfile hash",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "doc sentence",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "allow marker",
+   "expected": "allow",
+   "got": "allow"
+  },
+  {
+   "item": "real-shaped key in .env.example",
+   "expected": "allow",
+   "got": "allow"
+  }
+ ],
+ "watchdog": [
+  {
+   "item": "100k",
+   "expected": "silent",
+   "got": "silent"
+  },
+  {
+   "item": "249k",
+   "expected": "silent",
+   "got": "silent"
+  },
+  {
+   "item": "250k",
+   "expected": "warn",
+   "got": "warn"
+  },
+  {
+   "item": "250k again, same session",
+   "expected": "silent",
+   "got": "silent"
+  },
+  {
+   "item": "350k, same session",
+   "expected": "warn",
+   "got": "warn"
+  },
+  {
+   "item": "500k",
+   "expected": "warn",
+   "got": "warn"
+  }
+ ]
+}

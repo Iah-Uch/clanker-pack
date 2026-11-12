@@ -1,0 +1,16 @@
+{
+ "id": "speed-setup",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 158815,
+ "seconds": 27.9,
+ "rc": 0,
+ "checks": {
+  "recommends_low_and_200k": true,
+  "changed_file": true,
+  "asked_first": true,
+  "pass": true
+ },
+ "passed": true
+}

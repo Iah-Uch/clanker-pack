@@ -1,0 +1,16 @@
+{
+ "id": "python-patterns",
+ "arm": "bare",
+ "run": 2,
+ "fired": false,
+ "tokens": 76332,
+ "seconds": 28.1,
+ "rc": 0,
+ "checks": {
+  "asked_question": false,
+  "scaffolded": true,
+  "names_frameworks": true,
+  "pass": false
+ },
+ "passed": false
+}

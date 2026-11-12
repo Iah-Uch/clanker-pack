@@ -1,0 +1,1 @@
+The animate skill flags command palettes as a no-animation case because they’re opened frequently with a keyboard shortcut. So I left the palette unchanged.

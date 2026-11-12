@@ -1,0 +1,17 @@
+ D README.md
+?? .gitignore
+?? app.py
+?? index.html
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index ada39d0..0000000
+--- a/README.md
++++ /dev/null
+@@ -1 +0,0 @@
+-New project.

@@ -1,0 +1,17 @@
+{
+ "id": "review-animations",
+ "arm": "bare",
+ "run": 1,
+ "fired": false,
+ "tokens": 75213,
+ "seconds": 14.8,
+ "rc": 0,
+ "checks": {
+  "flags_ease_in": false,
+  "flags_duration": true,
+  "flags_transition_all": true,
+  "edited_files": false,
+  "pass": false
+ },
+ "passed": false
+}

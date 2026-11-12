@@ -1,0 +1,17 @@
+{
+ "id": "deploy-recipes",
+ "arm": "bare",
+ "run": 1,
+ "fired": false,
+ "tokens": 54996,
+ "seconds": 19.8,
+ "rc": 0,
+ "checks": {
+  "flags_public_secret": true,
+  "fixed_in_code": false,
+  "warns_shared_db": false,
+  "deployed": false,
+  "pass": true
+ },
+ "passed": true
+}

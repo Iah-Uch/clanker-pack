@@ -1,0 +1,3 @@
+Updated [.claude/settings.json](/tmp/bench2-_tdam29c/repo/.claude/settings.json) to use Haiku by default, low effort, and a medium effort cap. Removed the 800,000-token compaction override so Claude Code uses its model-tuned default. JSON validation passed.
+
+I left fast mode off because it increases the cost per token. These settings follow Claude Code’s [settings reference](https://code.claude.com/docs/en/settings-reference); the effort cap requires Claude Code v2.1.267 or later.

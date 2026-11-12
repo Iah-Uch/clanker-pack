@@ -1,0 +1,1 @@
+Updated [button.css](/tmp/bench2-5nbcah3d/repo/src/button.css) with a subtle color and shadow change on hover, a quick press response, and a visible keyboard focus state. The previous hover rule shrank the button to zero; it’s removed. Reduced-motion preferences are respected.

@@ -1,0 +1,16 @@
+{
+ "id": "data-spatial-2",
+ "arm": "forced",
+ "run": 1,
+ "fired": true,
+ "tokens": 50420,
+ "seconds": 13.3,
+ "rc": 0,
+ "checks": {
+  "names_target": false,
+  "names_same_topic": true,
+  "names_any_catalog": true,
+  "pass": true
+ },
+ "passed": true
+}

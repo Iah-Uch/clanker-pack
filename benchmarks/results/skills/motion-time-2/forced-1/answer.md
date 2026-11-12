@@ -1,0 +1,3 @@
+Use Anime.js. Its framework-free API covers CSS, SVG, DOM attributes, and plain JavaScript objects, with stagger helpers and timelines for sequenced, looping motion. The reusable technique is to calculate each item’s delay from its index (or distance from a chosen origin) and run the sequence from one timeline.
+
+Anime.js is MIT licensed, suitable for commercial products; keep its license notice when redistributing code. Check examples against your chosen version, since v3 and v4 have different APIs.

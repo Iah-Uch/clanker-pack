@@ -1,0 +1,31 @@
+ M README.md
+?? .gitignore
+?? app.py
+?? requirements.txt
+?? templates/
+
+BRANCHES
+* main
+TAGS
+STASH
+
+diff --git a/README.md b/README.md
+index ada39d0..41c3995 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,14 @@
+-New project.
++# Python web app
++
++A small starter app built with Flask.
++
++## Run locally
++
++```sh
++python -m venv .venv
++source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
++pip install -r requirements.txt
++python app.py
++```
++
++Open <http://127.0.0.1:5000>. The `/health` endpoint returns a small JSON health check.

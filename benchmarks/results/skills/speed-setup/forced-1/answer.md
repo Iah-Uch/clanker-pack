@@ -1,0 +1,1 @@
+Set the project defaults to `effortLevel: low` and `autoCompactWindow: 200000` in [.claude/settings.json](/tmp/bench2-sxfoos30/repo/.claude/settings.json), and added the skill’s Turn discipline block to [CLAUDE.md](/tmp/bench2-sxfoos30/repo/CLAUDE.md). I confirmed both files contain the intended changes.
