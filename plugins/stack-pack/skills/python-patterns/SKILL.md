@@ -1,6 +1,6 @@
 ---
 name: python-patterns
-description: Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying.
+description: Use when the user wants to start or change a Python project, app, API, script or web thing, or asks about a framework (FastAPI, Flask, Django), async versus sync, type hints or project layout. Asks what to build before it creates files.
 allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 
@@ -15,7 +15,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep
 
 This skill teaches **decision-making principles**, not fixed code to copy.
 
-- ASK user for framework preference when unclear
+- ASK user for framework preference when unclear. If the request names no app type (API, web page, script, CLI) or no framework, your first reply is one short question about it. Do not create files before the user answers.
 - Choose async vs sync based on CONTEXT
 - Don't default to same framework every time
 

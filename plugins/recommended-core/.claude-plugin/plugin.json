@@ -1,0 +1,28 @@
+{
+  "name": "recommended-core",
+  "description": "Installs 5 plugins from other authors: context savings, workflow discipline, security review, current library docs and code review.",
+  "version": "0.1.0",
+  "dependencies": [
+    "context-mode",
+    {
+      "name": "superpowers",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "security-guidance",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "context7",
+      "marketplace": "claude-plugins-official"
+    },
+    {
+      "name": "code-review",
+      "marketplace": "claude-plugins-official"
+    }
+  ],
+  "author": {
+    "name": "Iah-Uch"
+  },
+  "license": "MIT"
+}
