@@ -1,0 +1,17 @@
+{
+  "name": "safety-pack",
+  "description": "Guardrails for work you cannot fully review: six skills (ship checklist, plain-language diff, safe migrations, rollback plan, git safety net, deploy checks) and three hooks (destructive-command guard, secret scan, context watchdog).",
+  "version": "0.1.0",
+  "skills": [
+    "./skills/ship-checklist",
+    "./skills/explain-the-diff",
+    "./skills/db-migration-safe",
+    "./skills/rollback-plan",
+    "./skills/git-safety-net",
+    "./skills/deploy-recipes"
+  ],
+  "author": {
+    "name": "Iah-Uch"
+  },
+  "license": "MIT"
+}
