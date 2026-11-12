@@ -13,7 +13,7 @@
     {
       "name": "ui-pack",
       "source": "./plugins/ui-pack",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "description": "UI/UX skills: Tailwind v4, asset sourcing, animation craft"
     },
     {
@@ -25,7 +25,7 @@
     {
       "name": "stack-pack",
       "source": "./plugins/stack-pack",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "description": "Stack-specific skills"
     },
     {
@@ -45,6 +45,30 @@
       "source": "./plugins/turn-discipline",
       "version": "0.2.0",
       "description": "Setup skill for effort and compaction defaults, and a slice runner that works a plan one fresh context at a time"
+    },
+    {
+      "name": "safety-pack",
+      "source": "./plugins/safety-pack",
+      "version": "0.1.0",
+      "description": "Guardrails for work you cannot fully review: ship checklist, plain-language diff, safe migrations, rollback plan, git safety net, deploy checks, plus hooks that guard destructive commands, scan for secrets and watch context size"
+    },
+    {
+      "name": "recommended-core",
+      "source": "./plugins/recommended-core",
+      "version": "0.1.0",
+      "description": "Bundle: installs 5 plugins from other authors (context-mode, superpowers, security-guidance, context7, code-review), no extra binary"
+    },
+    {
+      "name": "recommended-extras",
+      "source": "./plugins/recommended-extras",
+      "version": "0.1.0",
+      "description": "Bundle: installs 9 optional plugins from other authors, such as caveman, taste-skill and cache-tax"
+    },
+    {
+      "name": "recommended-memory",
+      "source": "./plugins/recommended-memory",
+      "version": "0.1.0",
+      "description": "Bundle: installs ai-memory, long-term memory across sessions. Needs the ai-memory binary"
     },
     {
       "name": "recommended-pack",
